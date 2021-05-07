@@ -1268,7 +1268,7 @@ class application_window:
 
 
         def execute_single_files():
-            global total_files, rows_of_file, cur_file_num, cur_row_num
+            global total_files, rows_of_file, cur_file_num, cur_row_num, aver_time, total_completed_rows
             start_time = datetime.now()
 
             print("____________*** Prediction Al ***_____________________")
@@ -1456,6 +1456,9 @@ class application_window:
 
 
                     sk.execute(self.test_sheet_filepath,col,idx)
+                    # aver_time, total_completed_rows
+                    total_completed_rows += 1
+                    aver_time = (datetime.now() - start_time).total_seconds() / total_completed_rows 
 
         execute_single_files() 
 
@@ -1569,8 +1572,8 @@ class application_window:
         root = Tk() 
 
 
-        ico_path = curdir+"\\media\\my_icon.ico"
-        root.iconbitmap(ico_path)
+        # ico_path = curdir+"\\media\\my_icon.ico"
+        # root.iconbitmap(ico_path)
 
         # specify size of window. 
         # root.geometry("1024x1024") 
