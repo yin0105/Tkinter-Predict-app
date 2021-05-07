@@ -1,31 +1,24 @@
- #import modules
- 
-from os import curdir
-from tkinter import *
-import os
+#import modules
 import tkinter.filedialog
 import numpy as np
-from numpy.lib.function_base import append
-from numpy.lib.polynomial import polyfit
-from pandas.core import frame
-from styleframe import StyleFrame, utils
-
 import pandas as pd
 import numpy as np
-import csv
-
-from tkmagicgrid import *
-from tkinter import ttk
+import csv, threading, json, os
 import tkinter as tk
-import threading
-import json
-from pathlib import Path
 
+from pathlib import Path
 from storykey import storykey
 from tire import GeneticRisk
 from multiprocessing import Process
 from PIL import ImageTk,Image
-
+from numpy.lib.function_base import append
+from numpy.lib.polynomial import polyfit
+from pandas.core import frame
+from styleframe import StyleFrame, utils
+from tkmagicgrid import *
+from tkinter import ttk
+from os import curdir
+from tkinter import *
 
 
 def display_in_center(win, w, h):
@@ -77,6 +70,7 @@ except:
         def read(self,data): pass
         def flush(self): pass
         def close(self): pass
+
     # and now redirect all default streams to this dummyStream:
     sys.stdout = dummyStream()
     sys.stderr = dummyStream()
@@ -86,7 +80,6 @@ except:
     sys.__stdin__ = dummyStream()
 
 # Designing window for registration
-
 def register():
     global register_screen
     register_screen = Toplevel(main_screen)
@@ -94,7 +87,6 @@ def register():
     ico_path = curdir+"\media\my_icon.ico"
     register_screen.iconbitmap(ico_path)
     register_screen.title("Register")
-    # register_screen.geometry("300x250")
     display_in_center(user_not_found_screen, 300, 250)
  
     global username
@@ -139,12 +131,6 @@ def login():
     login_screen = Toplevel(main_screen)
     login_screen.title("Login")
     display_in_center(login_screen, 300, 250)
-    # login_screen.geometry("300x250")
-
-    # positionRight = int(main_screen.winfo_screenwidth()/2 - windowWidth/2)
-    # positionDown = int(main_screen.winfo_screenheight()/2 - windowHeight/2)
-    # main_screen.geometry("300x250+{}+{}".format(positionRight, positionDown))
-
 
     ico_path = curdir+"\media\my_icon.ico"
     login_screen.iconbitmap(ico_path)
@@ -174,10 +160,9 @@ def login():
 
     username_login_entry.focus_set()
  
+
 # Implementing event on register button
- 
 def register_user(event=None):
- 
     username_info = username.get()
     password_info = password.get()
  
@@ -192,8 +177,8 @@ def register_user(event=None):
     Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
     register_screen.after(700,register_screen.destroy)
  
+
 # Implementing event on login button 
- 
 def login_verify(event=None):
     username1 = username_verify.get()
     password1 = password_verify.get()
@@ -208,47 +193,22 @@ def login_verify(event=None):
         verify = file1.read().splitlines()
         if password1 in verify:
             login_sucess()
- 
         else:
             password_not_recognised()
- 
     else:
         user_not_found()
  
+
 # Designing popup for login success
- 
 def login_sucess():  
     login_screen.destroy()
     main_screen.destroy()
     welcome_screen()
-    
-    # global login_success_screen
 
- 
-    # login_success_screen = Toplevel(login_screen)
-    
-    # # img = tk.PhotoImage(file=curdir + "\\logo.png")
-    # image = Image.open("logo.jpg")
-    # img = ImageTk.PhotoImage(image)
-
-    # ico_path = curdir+"\media\my_icon.ico"
-    # # login_success_screen.iconbitmap(ico_path)
-    # # login_success_screen.title("Success")
-    
-    # login_success_screen.overrideredirect(True)
-    # Label(login_success_screen, image=img).pack(side = "bottom", fill = "both", expand = "yes") # text="Login Success"
-    # # login_success_screen.create_image(200, 200, image=img, anchor=NW)
-    
-    # display_in_center(login_success_screen, 500, 500)
-    # # Button(login_success_screen, image=img, command=del_and_open).pack()
-    # login_success_screen.after(50000, del_and_open)
     
 def del_and_open():
-    # delete_login_success()
     welcome_screen.destroy()
     application_window()
-
-  
 
     
 class application_window:
@@ -261,11 +221,9 @@ class application_window:
         frame.iconbitmap(ico_path)
         frame.title("Predictive AI Application Window")
         display_in_center(frame, 1000, 800)
-        # frame.geometry("1024x1024")
         self.current_dir = curdir
         b1 = tkinter.Button(frame, text='Select Master Sheet',width=15, height=2, command=self.get_path_master).place(x=30, y=50)
         b2 = tkinter.Button(frame, text='Select Multiple Test Sheets (use ctrl + click to select)',width=40, height=2, command=self.get_path_test).place(x=300,y=50)
-        #las - Label(frame,)
         self.progressbar = ttk.Progressbar(frame, mode='determinate',cursor='spider',length=300)
         self.progressbar.grid(column=1, row=0, sticky=W)
         self.progressbar["maximum"] = 100 
@@ -275,16 +233,9 @@ class application_window:
         Button(text = '     Predict Now!', height="80", width="200",  image = photo_login, 
                         compound = LEFT, command = lambda:self.start_submit_thread(None)).place(x=90,y=150)"""
 
-        #ttk.Button(frame, text="Predict Now",
-      
         
         b3 = tkinter.Button(frame, text='Predict Now!',width=15, height=2 ,command= lambda:self.start_submit_thread(None)).place(x=90,y=150)
         "b2.pack(fill='x')"
-
-
-    
-
-
 
         
     def get_path_master(self):
@@ -311,12 +262,8 @@ class application_window:
             file.close() 
         
         self.test_sheet_filepaths = list(tkinter.filedialog.askopenfilenames(parent=self.root, initialdir=check_from,title='Please Choose Test Sheet',filetypes=[('Excel File', '.xlsx'),('CSV Excel file', '.csv')]))
-     
-                
 
         """print(f)"""
-
-
 
 
     def get_prediction(self):
@@ -430,20 +377,10 @@ class application_window:
                     cert = check.split('(')
                     cer = float(cert[1])
                     return cer
-
                 else:
-                      
-
-                    
-
-                
-
                     if '(' in str(cell.value):
-                    
                         if cell.style.bg_color in {utils.colors.red, 'FFFF0000'}:
                             return 150
-                    
-
                         if cell.style.font_color in {utils.colors.green, 'FF00B050'}:
                             check = cell.value
                             check = check[:-1]
@@ -454,8 +391,6 @@ class application_window:
                                 return hyperparam['green']
                             elif cer[0] == 'V':
                                 return float(cer[1])
-
-
                         elif cell.style.font_color in {utils.colors.yellow, '00FFFF00'}:
                             check = cell.value
                             check = check[:-1]
@@ -466,8 +401,6 @@ class application_window:
                                 return hyperparam['yellow']
                             elif cer[0] == 'V':
                                 return float(cer[1])
-                            
-
                         elif cell.style.font_color in {utils.colors.purple, '800080'}:
                             check = cell.value
                             check = check[:-1]
@@ -478,8 +411,6 @@ class application_window:
                                 return hyperparam['purple']
                             elif cer[0] == 'V':
                                 return float(cer[1])
-
-                        
                         elif cell.style.font_color in {utils.colors.red, 'FFFF0000'}:
                             check = cell.value
                             check = check[:-1]
@@ -490,8 +421,6 @@ class application_window:
                                 return hyperparam['red']
                             elif cer[0] == 'V':
                                 return float(cer[1])
-
-
                         elif cell.style.font_color in {utils.colors.blue, 'FF0070C0'}:
                             check = cell.value
                             check = check[:-1]
@@ -501,8 +430,6 @@ class application_window:
                                 return hyperparam['blue']
                             elif cer[0] == 'V':
                                 return float(cer[1])
-                        
-                        
                         elif cell.style.font_color in {utils.colors.black, '00000000'}:
                             check = cell.value
                             check = check[:-1]
@@ -521,20 +448,16 @@ class application_window:
                                 return hyperparam['black']
                             elif cer[0] == 'V':
                                 return float(cer[1])
-
                     else:
                         return 0.00000001
-
             
             
             def only_cells_with_red_text_emp(cell):
                 if cell!=cell:
                     return 0
                 elif '(' in str(cell.value):
-
                     if cell.style.bg_color in {utils.colors.red, 'FFFF0000'}:
                         return 150
-
 
                     if cell.style.font_color in {utils.colors.green, 'FF00B050'}:
                         check = cell.value
@@ -546,7 +469,6 @@ class application_window:
                         elif cer[0] == 'V':
                             return float(cer[1])
 
-
                     elif cell.style.font_color in {utils.colors.yellow, '00FFFF00'}:
                         check = cell.value
                         check = check[:-1]
@@ -556,7 +478,6 @@ class application_window:
                             return hyperparam['yellow']
                         elif cer[0] == 'V':
                             return float(cer[1])
-                        
 
                     elif cell.style.font_color in {utils.colors.purple, '800080'}:
                         check = cell.value
@@ -567,7 +488,6 @@ class application_window:
                             return hyperparam['purple']
                         elif cer[0] == 'V':
                             return float(cer[1])
-
                     
                     elif cell.style.font_color in {utils.colors.red, 'FFFF0000'}:
                         check = cell.value
@@ -579,7 +499,6 @@ class application_window:
                         elif cer[0] == 'V':
                             return float(cer[1])
 
-
                     elif cell.style.font_color in {utils.colors.blue, 'FF0070C0'}:
                         check = cell.value
                         check = check[:-1]
@@ -589,7 +508,6 @@ class application_window:
                             return hyperparam['blue']
                         elif cer[0] == 'V':
                             return float(cer[1])
-                    
                     
                     elif cell.style.font_color in {utils.colors.black, '00000000'}:
                         check = cell.value
@@ -613,15 +531,12 @@ class application_window:
                 else:
                     return 0.0000001
             
-            
             sf_2 = StyleFrame(sf.applymap(only_cells_with_red_text))
             sf_3 = StyleFrame(sf.applymap(only_cells_with_red_text_emp))
-
 
             # passing a tuple to pandas.dropna is deprecated since pandas 0.23.0, but this can be
             # avoided by simply calling dropna twice, once with axis=0 and once with axis=1
             def get_sum(sf_3):
-
                 sf_3.to_excel(curdir+'/AI Internal-Outputs/output_0.xlsx').save()
                 df = read_data(curdir+'/AI Internal-Outputs/output_0.xlsx')
                 code_dict = []
@@ -650,14 +565,7 @@ class application_window:
                 def sumColumn(matrix):
                     return np.sum(matrix, axis=0) 
 
-                
-                #sum_std_mat = sumColumn(standard_matrix)
                 return standard_matrix
-
-            
-
-            #print(qualifying_dict)
-
 
             sf_2.to_excel(curdir+'/AI Internal-Outputs/output.xlsx').save()
             df = read_data(curdir+'/AI Internal-Outputs/output.xlsx')
@@ -666,7 +574,7 @@ class application_window:
             for col in df.columns:
                 if 'Code' in col:
                     lent = lent + 1
-            #print(lent)
+
             for i in range(1,lent):
                 code_dict.append("Code "+str(i))
             qf=[]
@@ -685,20 +593,7 @@ class application_window:
                 qualifying_dict[col_n] = df_n.values
             
             standard_matrix = df.values
-
-
-            print(standard_matrix)
-
-
-            
-            
-            #print(standard_matrix)
             return standard_matrix,qualifying_dict,get_sum(sf_3),lent
-
-
-     
-
-
 
 
         def get_age_decision(age,lent):
@@ -805,14 +700,6 @@ class application_window:
             return dicte,prediction_codes
 
 
-
-
-
-            
-
-     
-
-
         def get_percentile(score_arr,sum_std_mat,idx_file,df_attempt):
 
             """
@@ -842,8 +729,6 @@ class application_window:
                 max_v = 1
             mulk = (max_v - inx)/max_v
 
-
-
             scorecard = [(((i/max_v)*100)-(cnt*mulk)*2.2132) for i in score_arr]
             return scorecard,comp_std
 
@@ -854,27 +739,16 @@ class application_window:
             
             hell_dict = dict.fromkeys(code_dict, 1)
             for key,val in qualify_dict.items():
-
-            
                 check = np.where(np.logical_and(val==150, attempt==1))[0]
-                #print(key)
-                #print(check)
                 
                 if len(check)>0:
-    
-                    
-                    
                     hell_dict[key]= 1
                 else:
                     hell_dict[key]= -100000
 
-            #print(hell_dict)
-
             return hell_dict
 
         def get_test_output(df, col_number):
-            #df = read_data(filepath)
-
             chl = 0
             chlt = 0
             for inx,rows in df.iterrows():
@@ -883,7 +757,6 @@ class application_window:
             for inx,rows in df.iterrows():
                 if rows['Sub-Feature'] == "DropDowns":
                     chlt = inx
-      
 
             df_check = df.iloc[chl+1:chlt-7]
             df = df[[col_number]]
@@ -891,13 +764,12 @@ class application_window:
             age = df.iloc[5:6].values[0]
             age = age[0]
             ethinicity = str(ethinicity[0])
-        
 
             df_check = df_check.fillna(0)
-            #print(df_check)
             to_check_array = df_check[col_number].values
-            #print(to_check_array)
             return to_check_array,age,ethinicity
+
+
         def get_top_5_predictions(to_check_array,age,standard_matrix,qualifying_dict,sum_std_mat,ethnicity,col_number,lent,mat_master_dict,to_check_dict):
             
             """ dicte,prediction_codes = get_age_decision(age)
@@ -952,10 +824,6 @@ class application_window:
                             
                 return output
 
-
-
-
-
             consumption_dict = {}
             consumption_dict['Finetuning Logic'] = "Not Consumed"
             consumption_dict['Qualifying criteria'] = "Not Used"
@@ -973,14 +841,12 @@ class application_window:
             for inx,num in enumerate(to_check_array):
                 rnum = "(R{},{})".format(inx+5,num)
                 rnums.append(rnum)
-
                 
             to_check_dict[col_number] = rnums
 
             with open("Input Sheets/mat_dict.txt",'r') as file:
                 line = file.read()
                 inner_list = [elt.strip() for elt in line.split(',')]
-            #print(inner_list)
 
             f = open('Value-json/logic_activation.json') 
             activation = json.load(f)
@@ -994,27 +860,18 @@ class application_window:
                             for aj in range(len(ajio)):
                                 tax_p.append('{}(R{},{})'.format(ajio[aj],aj+5,code_idx))
                             
-
-
                             mat_dict.append(tax_p) 
-                            
             
             mat_master_dict[col_number] = np.array(mat_dict).T
-            
                 
             standard_matrix = standard_matrix
             for inx in range(len(to_check_array)):
                 if to_check_array[inx] < 0:
-                    #print(len(standard_matrix[inx]))
-                    
                     for idx,val in enumerate(standard_matrix[inx]):
                         if val < 0:
                             standard_matrix[inx][idx] = 0
-            #print(standard_matrix)
-            print("to_check_array = ", to_check_array.T)
-            print("standard_matrix = ", standard_matrix)
+
             tat_val = np.dot(to_check_array.T,standard_matrix)
-            #dicte,prediction_codes = get_age_decision(age,lent)
             qualify_dict = get_qualify(to_check_array,qualifying_dict,lent)
             col_number =col_number
             intial_logic = {}
@@ -1039,38 +896,19 @@ class application_window:
                         pass
                 intial_logic[code_idx] = tat_val[idx]
             
-
-                   
-
-      
-            
-
-            
             f = open('Value-json/logic_activation.json') 
             activation = json.load(f)
 
-
             if activation['settlement_logic'] == 'active':
-
                 df = pd.read_excel(os.curdir + '/Logic Container/Insurance settlement history.xlsx')
-
- 
-            
-
-
                 for idx,rows in df.iterrows():
-
                     if rows['Age']!=rows['Age']:
                         break
                     else:
                         age_r = rows['Age'].split('-')
-                    
-
                         age_start = int(age_r[0])
                         age_end = int(age_r[1])
-                        
 
-                        
                         if age_start <= age <= age_end:
                             total = 0
                             val_arr = (rows[1:].values)
@@ -1080,70 +918,41 @@ class application_window:
                                 else:
                                     total = total + val
 
-
-
-
                             for inx,score in enumerate(tat_val):
                                 code_idx = "Code "+str(inx+1)
-
                                 if inx!=3122239:
-
-
                                     if '#' in str(rows[code_idx]):
                                         pass
-                                    
                                     else:
-
-
-                                        
-
                                         prob = float(rows[code_idx])/float(total)
-                                       
                                         consumption_dict['Insurance settlement history'] = "Consumed"
                                         tat_val[inx] = tat_val[inx] * prob
-                                  
-                                        
-                                        
-                            
-                                         
                                 else:
                                     continue
             
             settlement_logic = {}
 
-
             for inx,score in enumerate(tat_val):
                 code_idx = "Code "+str(inx+1)
                 settlement_logic[code_idx] = tat_val[inx]
 
-
             f = open('Value-json/logic_activation.json') 
             activation = json.load(f)
-
 
             if activation['ethnicity_logic'] == 'active':
 
                 df = pd.read_excel(os.curdir + '/Logic Container/Ethnicity Logic.xlsx')
-                #total  = df.iloc[9,:]
                 cols = df.columns
                 for inx,rows in df.iterrows():
                     if rows['Ethnicity']!=rows['Ethnicity']:
                         break
                     else:
                         if ethnicity == rows['Ethnicity']:
-                            
                             for inx,score in enumerate(tat_val):
                                 code_idx = "Code "+str(inx+1)
-
                                 if inx!=311229:
-
-                            
                                     prob = rows[code_idx]
-                   
                                     consumption_dict['Ethnicity Logic'] = "Consumed"
-                                    
-                                    
-                        
                                     tat_val[inx] = tat_val[inx] * prob 
                                 else:
                                     pass
@@ -1152,55 +961,32 @@ class application_window:
                                 code_idx = "Code "+str(inx+1)
 
                                 if inx!=311129:
-
-                            
                                     prob = 1
-                        
                                     consumption_dict['Ethnicity Logic'] = "Consumed"
-                                    
-                                    
-                        
                                     tat_val[inx] = tat_val[inx] * prob 
                                 else:
                                     pass
-
-
-                        
-
-
-
-
-            
             ethnicity_logic = {}
-
 
             for inx,score in enumerate(tat_val):
                 code_idx = "Code "+str(inx+1)
                 ethnicity_logic[code_idx] = tat_val[inx]
             
-            
-            
             f = open('Value-json/logic_activation.json') 
             activation = json.load(f)
-
 
             if activation['finetuning_logic'] == 'active':
 
                 df = pd.read_excel(os.curdir + '/Logic Container/Fine tuning logic.xlsx')
-                #total  = df.iloc[9,:]
                 cols = df.columns
                 for inx,rows in df.iterrows():
                     if rows['Age']!=rows['Age']:
                         break
                     else:
                         age_r = rows['Age'].split('-')
-                    
-
                         age_start = int(age_r[0])
                         age_end = int(age_r[1])
-                        
 
-                        
                         if age_start <= age <= age_end:
                             
                             for inx,score in enumerate(tat_val):
@@ -1494,12 +1280,7 @@ class application_window:
             
                 file1.write("T"+self.test_sheet_filepath)
                 file1.write(" \n")
-                file1.close() 
-            
-                # test_df = read_data(self.test_sheet_filepath)
-                # col_name = test_df.iloc[:, 4:].columns
-                # print("col_name = ", col_name)
-                # col_name = col_name
+                file1.close()
         
                 test_df = read_data(self.test_sheet_filepath)
                 test_df = df_column_uniquify(test_df)
@@ -1573,12 +1354,13 @@ class application_window:
                         accuracy_1 = accuracy_1+1
                     
                     df = pd.DataFrame(consumption_metrics, columns =['Column Reference Code','Logic Consumption Dictonary'])
-                    file = open("AI External-Outputs/path_info.txt","r")
-                    for lines in file.read().splitlines():
-                        if lines[0] == "T":
-                            test_filepath = lines[1:]
-                    file.close() 
-                    
+############################                    
+                    # file = open("AI External-Outputs/path_info.txt","r")
+                    # for lines in file.read().splitlines():
+                    #     if lines[0] == "T":
+                    #         test_filepath = lines[1:]
+                    # file.close() 
+############################                    
                     t_filename = Path(test_filepath).stem
 
                     with open("Input Sheets/mat_dict.txt",'r') as file:
@@ -1616,11 +1398,11 @@ class application_window:
                     
                     df.to_csv("AI External-Outputs/Prediction_metric_{}.csv".format(t_filename))
 
-                    file = open("AI External-Outputs/path_info.txt","r")
-                    for lines in file.read().splitlines():
-                        if lines[0] == "T":
-                            test_filepath = lines[1:]
-                    file.close() 
+                    # file = open("AI External-Outputs/path_info.txt","r")
+                    # for lines in file.read().splitlines():
+                    #     if lines[0] == "T":
+                    #         test_filepath = lines[1:]
+                    # file.close() 
                     total_df= pd.read_excel(test_filepath)
                     chl = 0
                     chlt = 0
@@ -1660,7 +1442,6 @@ class application_window:
                     a = threading.Thread(target = gr.execute(self.test_sheet_filepath,col))
                     a.start()
                     a.join()
-
 
 
                     sk.execute(self.test_sheet_filepath,col,idx)
@@ -1743,8 +1524,6 @@ class application_window:
             
 
         def display_prediction():
-
-            
             root = tkinter.Tk()
             # root.geometry("1024x1024")
             display_in_center(root, 1000, 800)
@@ -1889,14 +1668,12 @@ def user_not_found():
     Label(user_not_found_screen, text="User Not Found").pack()
     Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
     user_not_found.after(500, delete_user_not_found_screen)
- 
+
+
 # Deleting popups
- 
 def delete_login_success():
-    # login_success_screen.destroy()
     login_screen.destroy()
     main_screen.destroy()
-
  
  
 def delete_password_not_recognised():
@@ -1908,37 +1685,25 @@ def delete_user_not_found_screen():
  
  
 # Designing Main(first) window
-
 def welcome_screen():
     global welcome_screen
     welcome_screen = Tk()
 
     image = Image.open("logo.jpg")
-    # print(image.width, image.height)
     width, height = image.size
     new_width = 600
     new_hight = int(height / width * new_width)
     image = image.resize((new_width, new_hight))
     img = ImageTk.PhotoImage(image)
-    
-    # ico_path = curdir+"\media\my_icon.ico"
-    # welcome_screen.iconbitmap(ico_path)
-    # # welcome_screen.geometry("300x250")
-    # welcome_screen.title("Account Login")
     welcome_screen.overrideredirect(True)
-    # Label(text="PREDECTIVE AI", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
-    # Label(text="", image=img).pack()
-    # Button(text="Login", height="2", width="30", command = login).pack()
-    # Label(text="").pack()
     Label(image=img).pack()
-
     display_in_center(welcome_screen, new_width, new_hight)
+
     try:
         welcome_screen.after(500, del_and_open)
     except:
         pass
     welcome_screen.mainloop()
-
 
    
 def main_account_screen():
@@ -1949,7 +1714,6 @@ def main_account_screen():
 
     ico_path = curdir+"\media\my_icon.ico"
     main_screen.iconbitmap(ico_path)
-    # main_screen.geometry("300x250")
     main_screen.title("Account Login")
     Label(text="PREDECTIVE AI", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
     Label(text="").pack()
