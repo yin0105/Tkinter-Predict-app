@@ -1,0 +1,10 @@
+{
+  "green": 120,
+  "red": 100,
+  "black" : 100,
+  "blue" : 105,
+  "yellow" : 130,
+  "purple": 90, 
+  "empty" : -100,
+  "alpha" : 0
+ }

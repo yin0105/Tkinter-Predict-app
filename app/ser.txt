@@ -1,0 +1,2267 @@
+<html><head>
+	<title>Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment</title>
+	<link rel="shortcut icon" href="https://www.magview.com/wp-content/themes/magview/images/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The Tyrer-Cuzick risk model or IBIS risk tool assesses a women’s 10 year and lifetime risk of developing breast cancer.">
+	<meta name="keywords" content="Can you do more than one?  If so tyrer-cuzick, IBIS risk tool, breast cancer risk. If you can only capture one, then please use tyrer-cuzick">
+	<!-- CSS File(s) -->	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="fonts/font.css">	
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" id="magview-style-css" href="css/magview-style.css" type="text/css" media="all">	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://pi.pardot.com/pd.js"></script><script type="text/javascript">
+		piAId = '860853';
+		piCId = '54036';
+		piHostname = 'pi.pardot.com'; 
+		(function() {
+						function async_load(){
+							var s = document.createElement('script'); s.type = 'text/javascript';
+							s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+							var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+						}
+						if(window.attachEvent) { window.attachEvent('оnload', async_load); }
+						else { window.addEventListener('load', async_load, false); }
+		})();
+	</script>
+<script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=&amp;visitor_id_sign=&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick%20Risk%20Calculator%20for%20Breast%20Cancer%20Risk%20Assessment&amp;url=https%3A%2F%2Fibis-risk-calculator.magview.com%2F&amp;referrer="></script><script type="text/javascript" src="https://info.magview.com/analytics?conly=true&amp;visitor_id=94792369&amp;visitor_id_sign=c40a60bb795360d8880e96d1e12f74c41c333fcea696734876bba309e7fd4b6d706f2aae1d7086efc21c507c572ba0de19414a33&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment&amp;url=https://ibis-risk-calculator.magview.com/&amp;referrer="></script></head>
+<body>
+	<div id="myDIV"></div>
+	<!-- Header Start -->
+	<div class="logo_holder large">
+	   <div class="container">
+		  <div class="header_cn">
+
+		  	<div class="mobile_menu_cick">
+			 	<div class="menu_humberg" onclick="openNav()">☰</div>
+			 </div>
+			 <div class="mobile_menu_holder">
+			 	<div id="mySidenav" class="sidenav">
+			 		<div class="mob_nav_header">
+			 			<div class="mob_nav_lebel">NAVIGATE</div>
+			 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			 		</div>
+			 		<div class="admin_sidebar accordion-nav">
+				 		<ul class="inline-list">
+						  <li class="roimenu has-subnav" style="position: relative;">
+							 <a href="JavaScript:void(0);" style="margin-right: 20%;">Software Solutions</a>
+							 <span class="accordion-btn-wrap" style="width: 20%; position: absolute; top: 0px; text-align: center; cursor: pointer; display: inline-block; right: 0px;"><span class="accordion-btn accordion-collapsed" style="display: inline-block; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-down"></i></span><span class="accordion-btn accordion-expanded" style="display: none; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-up"></i></span></span><ul style="display: none;">
+								<li><a href="https://www.magview.com/patient-tracking-software-solution/">Mammography Tracking</a></li>
+								<li><a href="https://www.magview.com/solutions/radiology-reporting/">Radiologist Structured Reporting</a></li>
+								<li><a href="https://www.magview.com/breast-cancer-risk-assessment/">Risk Assessment</a></li>
+								<li><a href="https://www.magview.com/luminary-workflow-manager/">Luminary Workflow Manager</a></li>
+								<li><a href="https://www.magview.com/mammography-patient-workflow/#">Patient Experience Tools</a></li>
+								<li><a href="https://www.magview.com/mammography-technologist-workflow/">Technologist Workflow</a></li>
+								<li><a href="https://www.magview.com/solutions/patient-navigation/">Patient Navigation</a></li>
+								<li><a href="https://www.magview.com/outcomes/">Outcomes &amp; Analytics</a></li>
+								<li><a href="https://www.lungview.com/">Lung Screening Information System</a></li>
+							 </ul>
+						  </li>
+						  <li class="roimenu has-subnav" style="position: relative;">
+							 <a href="JavaScript:void(0);" style="margin-right: 20%;">Resources</a>
+							 <span class="accordion-btn-wrap" style="width: 20%; position: absolute; top: 0px; text-align: center; cursor: pointer; display: inline-block; right: 0px;"><span class="accordion-btn accordion-collapsed" style="display: inline-block; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-down"></i></span><span class="accordion-btn accordion-expanded" style="display: none; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-up"></i></span></span><ul style="display: none;">
+								<li><a href="https://www.magview.com/resources/">Resources</a></li>
+								<li><a href="https://www.magview.com/roi/">Return on Investment</a></li>
+								<li><a href="https://www.magview.com/comparison/">MagView Comparison</a></li>
+								<li><a href="https://www.magview.com/epic-integrations/">Epic Integrations</a></li>
+								<li><a href="https://www.magview.com/ibis-risk-calculator">IBIS Risk Calculator</a></li>
+							 </ul>
+						  </li>
+						  <li class="about_menu has-subnav" style="position: relative;">
+							 <a href="JavaScript:void(0);" style="margin-right: 20%;">About</a>
+							 <span class="accordion-btn-wrap" style="width: 20%; position: absolute; top: 0px; text-align: center; cursor: pointer; display: inline-block; right: 0px;"><span class="accordion-btn accordion-collapsed" style="display: inline-block; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-down"></i></span><span class="accordion-btn accordion-expanded" style="display: none; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-up"></i></span></span><ul style="display: none;">
+								<li><a href="https://www.magview.com/about-us">Who we are</a></li>
+								<li><a href="https://www.magview.com/about-us/magview-difference">MagView Difference</a></li>
+							 </ul>
+						  </li>
+						  <li class="roimenu has-subnav" style="position: relative;">
+							 <a href="JavaScript:void(0);" style="margin-right: 20%;">Media</a>
+							 <span class="accordion-btn-wrap" style="width: 20%; position: absolute; top: 0px; text-align: center; cursor: pointer; display: inline-block; right: 0px;"><span class="accordion-btn accordion-collapsed" style="display: inline-block; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-down"></i></span><span class="accordion-btn accordion-expanded" style="display: none; width: 100%; line-height: 39px; height: 39px;"><i class="fa fa-angle-up"></i></span></span><ul style="display: none;">
+								<li><a href="https://www.magview.com/news-events/">News &amp; Events</a></li>
+								<li><a href="https://www.magview.com/blog/">Blog</a></li>
+							 </ul>
+						  </li>
+						  <li><a href="https://www.magview.com/contact/">Contact</a></li>
+						  <li><a href="#" class="" data-toggle="modal" data-target="#myModal">Request Demo</a></li>
+					   </ul>
+					</div>
+				</div>
+			 </div>
+
+
+
+			 <div class="logomain_holder">
+				<a href="https://www.magview.com/">
+				<img src="https://www.magview.com/wp-content/themes/magview/images/logo.jpg" alt="">
+				</a>
+			 </div>
+			 <div class="nav_holder">
+				<div class="navtop_nw">
+				   <ul>
+					  <li><a href="https://magview.freshdesk.com/support/login" class="" target="_blank"> Support Login</a></li>
+					  <li class="tel_num"><a href="tel:8005538996"> (800) 553-8996</a></li>
+				   </ul>
+				</div>
+				<div class="clearfix"></div>
+				<div class="navigation" id="navigation">
+				   <ul class="inline-list">
+					  <li class="roimenu">
+						 <a href="JavaScript:void(0);">Software Solutions</a>
+						 <ul class="dropdown-menu5 drop_content">
+							<li><a href="https://www.magview.com/patient-tracking-software-solution/">Mammography Tracking</a></li>
+							<li><a href="https://www.magview.com/solutions/radiology-reporting/">Radiologist Structured Reporting</a></li>
+							<li><a href="https://www.magview.com/breast-cancer-risk-assessment/">Risk Assessment</a></li>
+							<li><a href="https://www.magview.com/luminary-workflow-manager/">Luminary Workflow Manager</a></li>
+							<li><a href="https://www.magview.com/mammography-patient-workflow/#">Patient Experience Tools</a></li>
+							<li><a href="https://www.magview.com/mammography-technologist-workflow/">Technologist Workflow</a></li>
+							<li><a href="https://www.magview.com/solutions/patient-navigation/">Patient Navigation</a></li>
+							<li><a href="https://www.magview.com/outcomes/">Outcomes &amp; Analytics</a></li>
+							<li><a href="https://www.lungview.com/">Lung Screening Information System</a></li>
+						 </ul>
+					  </li>
+					  <li class="roimenu">
+						 <a href="JavaScript:void(0);">Resources</a>
+						 <ul class="dropdown-menu2 drop_content">
+							<li><a href="https://www.magview.com/resources/">Resources</a></li>
+							<li><a href="https://www.magview.com/roi/">Return on Investment</a></li>
+							<li><a href="https://www.magview.com/comparison/">MagView Comparison</a></li>
+							<li><a href="https://www.magview.com/epic-integrations/">Epic Integrations</a></li>
+							<li><a href="https://www.magview.com/ibis-risk-calculator">IBIS Risk Calculator</a></li>
+						 </ul>
+					  </li>
+					  <li class="about_menu">
+						 <a href="JavaScript:void(0);">About</a>
+						 <ul class="dropdown-menu3 drop_content">
+							<li><a href="https://www.magview.com/about-us">Who we are</a></li>
+							<li><a href="https://www.magview.com/about-us/magview-difference">MagView Difference</a></li>
+						 </ul>
+					  </li>
+					  <li class="roimenu">
+						 <a href="JavaScript:void(0);">Media</a>
+						 <ul class="dropdown-menu2 drop_content">
+							<li><a href="https://www.magview.com/news-events/">News &amp; Events</a></li>
+							<li><a href="https://www.magview.com/blog/">Blog</a></li>
+						 </ul>
+					  </li>
+					  <li><a href="https://www.magview.com/contact/">Contact</a></li>
+					  <li><a href="#" class="" data-toggle="modal" data-target="#myModal">Request Demo</a></li>
+				   </ul>
+				</div>
+			 </div>
+
+			  <div class="mobile_rqst_btn"><a href="https://www.magview.com/amp/index.php#gnrlfrm" class="btn1 gray">Request Demo</a></div>
+
+		  </div>
+	   </div>
+	</div>
+
+	<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "270px";
+		  var element = document.getElementById("myDIV");
+  		  element.classList.add("mystyle");
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		  var element = document.getElementById("myDIV");
+  	  	  element.classList.remove("mystyle");
+		}
+	</script>
+
+
+	<!-- Header End -->	
+
+	<div class="risk_tab_holder">
+		<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+			<div class="tab_list_holder">
+				<ul class="resp-tabs-list multi-steps container" id="risk_tab">
+					<li data-id="1" class="resp-tab-item disable-tab" aria-controls="tab_item-0" role="tab">PERSONAL HISTORY</li>
+					<li data-id="2" class="resp-tab-item disable-tab" aria-controls="tab_item-1" role="tab">QUESTIONNAIRE</li>
+					<li data-id="3" class="resp-tab-item disable-tab" aria-controls="tab_item-2" role="tab">FAMILY HISTORY</li>
+					<li data-id="4" class="resp-tab-item resp-tab-active" aria-controls="tab_item-3" role="tab">YOUR RESULTS</li>
+					<li data-id="5" class="resp-tab-item" aria-controls="tab_item-4" role="tab">FAQ</li>
+					<!--<li data-id="6">YOUR RESULTS NEW</li>-->
+				</ul>
+			</div>
+			
+			<!--<form id="calculate_your_risk_form" name="calculate_your_risk_form">-->
+			<form id="calculate_your_risk_form" action="" method="post">
+			
+				<div class="resp-tabs-container container">
+					<h2 class="resp-accordion" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>PERSONAL HISTORY</h2><div class="resp-tab-content" aria-labelledby="tab_item-0"><!-- PERSONAL HISTORY Section Start -->
+						<div class="top_tab_content">
+							<!--<h3>Calculate Your Risk</h3>-->
+							<h3>Tyrer-Cuzick Risk Assessment Calculator</h3>
+							<div class="intro-page-info">
+								<h4 class="title-sp">Assess Breast Cancer Risk</h4>
+								<p class="intro-info">This risk calculator asks questions about your personal and family history to determine the possibility of developing breast cancer. The results will display your 10-year risk and your lifetime risk score. The purpose of this tool is simply to inform you. Please consult with your physician should you have any questions about your risk for breast cancer or for guidance on options for breast cancer screening or genetic counseling.</p>
+								<p class="intro-info-texp">If you're a clinical user looking to integrate the Tyrer-Cuzick risk model into your workflow, <a href="https://www.magview.com/breast-cancer-risk-assessment/" class="rach" target="_blank">click here</a> to learn more about MagView's risk assessment tools.</p>			
+							</div>
+								
+								<div class="form_holder_res fst-frm-res">
+									<div class="frm_bx">
+										<div class="frm_label">YOUR AGE</div>
+										<div class="frm_fld_res">
+											<label>What is your current age?</label>
+											<div class="cont-btn">
+												<input type="text" class="input1" id="current_age" name="current_age" value="" maxlength="3" autocomplete="off" onfocus="npsm(this,'current_age','cont-btn')">
+												<div class="spinner">
+													<button type="button" class="up1 button" onclick="scrollup(1,1)">▲</button>
+													<button type="button" class="down1 button" onclick="scrolldown(1,1)">▼</button>
+												</div>
+                                            </div>
+											
+											<!-- Error Messge Section -->
+											<div id="age_err" class="invisible">
+												<p class="text-error"></p>
+											</div>
+											
+										</div>											
+									</div>
+								</div>
+								
+								<!-- Height and Weight Section Start -->
+								<div class="form_holder_res">
+									<div class="frm_bx metric_area">
+										<div class="frm_label">System of Measurement:</div>
+										<div class="frm_fld_res">
+											<div class="radio_res_holder">
+												<label class="rad_ik_hld">Metric Units
+												  <input type="radio" name="radio_measurment" class="system_measurment_redio_one" value="metric">
+												  <span class="checkmark"></span>
+												</label>
+												<label class="rad_ik_hld">Imperial Units
+												  <input type="radio" name="radio_measurment" class="system_measurment_redio_two" checked="" value="imperial">
+												  <span class="checkmark"></span>
+												</label>
+												
+											</div>
+										</div>
+									</div>
+									<div class="frm_bx" style="" id="measurment_one">
+										<div class="frm_label">HEIGHT &amp; WEIGHT</div>
+										<div class="frm_fld_res">
+											<label>What is your current height and weight?</label>
+											<div class="date_frm_res_hld mteric_new">
+												<!-- Metric Height Section Start -->
+												<div>
+													<label>(m)</label>
+													<div class="cont-btn">
+														<!-- <input class="input6" type="text" id="height_m" name="height[meter]" data-allow="dot" value="" maxlength="2"> -->
+														<input class="input6" type="text" id="height_m" name="height[meter]" value="" autocomplete="off" maxlength="6" onfocus="np(this,'height_m','cont-btn')" data-allow="dot"><!-- onkeypress="return validateFloatKeyPress(this,event);"  -->
+														<!-- if(this.value.length==6) return false;  -->
+														<!-- onkeypress="return validateFloatKeyPress(this,event);" -->
+														<!-- Number Input Up-Down Arrow View -->
+														<!--<div class="spinner">
+															<button type="button" class="up6 button" onclick="scrollup(6,6)">&#9650;</button>
+															<button type="button" class="down6 button" onclick="scrolldown(6,6)">&#9660;</button>
+														</div>-->
+													</div>	
+												</div>
+												<span>Height</span>
+												<!-- Metric Height Section End -->
+												
+												<!-- Metric Weight Section Start -->
+												<div>
+													<label>(kg)</label>
+													<div class="cont-btn">
+														<!--<input class="input7" type="text" id="weight_kg" name="weight[kg]" data-allow="dot" value="" maxlength="2" autocomplete="off">-->
+														<input class="input7" type="text" id="weight_kg" name="weight[kg]" value="" autocomplete="off" maxlength="6" onfocus="np(this,'weight_kg','cont-btn')" onkeypress="return validateFloatKeyPress(this,event);" data-allow="dot">
+														<!-- Number Input Up-Down Arrow View -->
+														<!--<div class="spinner">
+															<button type="button" class="up7 button" onclick="scrollup(7,7)">&#9650;</button>
+															<button type="button" class="down7 button" onclick="scrolldown(7,7)">&#9660;</button>
+														</div>-->
+													</div>
+												</div>
+												<span>Weight</span>			
+												<!-- Metric Weight Section End -->
+											</div>
+											
+											<!-- Error Messge Section -->
+											<div id="hnwm_err" class="invisible">
+												<p class="text-error"></p>
+											</div>
+											
+										</div>
+									</div>
+
+									<div class="frm_bx" style="display: none;" id="measurment_two">
+										<div class="frm_label">HEIGHT &amp; WEIGHT</div>
+										<div class="frm_fld_res">
+											<label>What is your current height and weight?</label>
+											<div class="date_frm_res_hld mteric_new">
+												<!-- Imperial Height Section Start -->
+												<div class="weight_height_all"> 
+													<div>
+														<label>(ft)</label>
+														<div class="cont-btn">
+															<input class="input8" type="text" id="height_ft" name="height[feet]" value="" maxlength="2" autocomplete="off" onfocus="npsm(this,'height_ft','cont-btn')">
+															<!-- Number Input Up-Down Arrow View -->
+															<!--<div class="spinner">
+																<button type="button" class="up8 button" onclick="scrollup(8,8)">&#9650;</button>
+																<button type="button" class="down8 button" onclick="scrolldown(8,8)">&#9660;</button>
+															</div>-->
+														</div>	
+													</div>
+													<div>
+														<label>(in)</label>
+														<div class="cont-btn">
+															<!--<input class="input9" type="text" id="height_inch" name="height[inch]" value="" maxlength="2" autocomplete="off">-->
+															<input class="input9" type="text" id="height_inch" name="height[inch]" value="" autocomplete="off" maxlength="2" onfocus="npsm(this,'height_inch','cont-btn')" data-allow="zero">
+															<!-- Number Input Up-Down Arrow View -->
+															<!--<div class="spinner">
+																<button type="button" class="up9 button" onclick="scrollinchup(9,9)">&#9650;</button>
+																<button type="button" class="down9 button" onclick="scrolldown(9,9)">&#9660;</button>
+															</div>-->
+														</div>	
+													</div>
+													<span>Height</span>
+													
+													<!-- Error Messge Section -->
+													<div id="hi_err" class="sam invisible">
+														<p class="text-error"></p>
+													</div>
+												</div>
+												
+												<!-- Imperial Height Section End -->
+												
+												<!-- Imperial Weight Section Start -->
+												<div class="weight_height_all"> 
+													<div>
+														<label>(lb)</label>
+														<div class="cont-btn">
+															<!--<input class="input11" type="text" id="weight_lbs" name="weight[lbs]" data-allow="dot" value="" onKeyPress="if(this.value.length==3) return false;" min="1" autocomplete="off">-->
+															<input class="input11" type="text" id="weight_lbs" name="weight[lbs]" value="" autocomplete="off" maxlength="3" onfocus="npsm(this,'weight_lbs','cont-btn')"> <!-- onkeypress="return validateFloatKeyPress(this,event);" -->
+															<!-- Number Input Up-Down Arrow View -->
+															<!--<div class="spinner">
+																<button type="button" class="up11 button" onclick="scrollup(11,11)">&#9650;</button>
+																<button type="button" class="down11 button" onclick="scrolldown(11,11)">&#9660;</button>
+															</div>-->
+														</div>	
+													</div>
+													<span>Weight</span>
+													
+													<!-- Error Messge Section -->
+													<div id="wi_err" class="sam invisible">
+														<p class="text-error"></p>
+													</div>
+													
+												</div>
+												<!-- Imperial Weight Section End -->
+											
+											</div>
+											
+										</div>								
+									</div>
+								</div>
+								<!-- Height and Weight Section End -->								
+								
+								<!-- MENSTRUAL PERIOD Section Start -->
+								<div class="form_holder_res">
+									<div class="frm_bx">
+										<div class="frm_label">MENSTRUAL PERIOD</div>
+										<div class="frm_fld_res">
+											<label>Please enter the age at the time of your first menstrual period?</label>
+											<div class="date_frm_res_hld">
+												<div class="cont-btn">
+													<input type="text" class="input5" id="menstrual_age" name="menstrual_age" value="" maxlength="3" autocomplete="off" onfocus="npsm(this,'menstrual_age','cont-btn')">
+													<div class="spinner">
+														<button type="button" class="up5 button" onclick="scrollup(5,5)">▲</button>
+														<button type="button" class="down5 button" onclick="scrolldown(5,5)">▼</button>
+													</div>
+												<fieldset class="numpad" style="display: none;"><input class="key" type="button" value="1"><input class="key" type="button" value="2"><input class="key" type="button" value="3"><input class="key" type="button" value="4"><input class="key" type="button" value="5"><input class="key" type="button" value="6"><input class="key" type="button" value="7"><input class="key" type="button" value="8"><input class="key" type="button" value="9"><input class="key notnth" type="button" value="0"><a class="key num_back"><i class="fa fa-arrow-left"></i></a><a class="key num_reset">Reset</a><a class="key num_close">Enter</a></fieldset></div>												
+												<span>years old</span>
+											</div> 
+											
+											<!-- Error Messge Section -->
+											<div id="mensp_err" class="invisible">
+												<p class="text-error"></p>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<!-- MENSTRUAL PERIOD Section End -->
+								
+								<a href="javascript:void(0)" id="htab1_next" class="next_btn_res">NEXT</a><!-- Validate Button -->	
+								<a href="javascript:void(0)" class="next_btn_res next_btn_2" style="">NEXT</a><!-- Next to QUESTIONNAIRE Tab   invisible -->	
+								
+								<div class="intro-page-info">
+									<h4>Tyrer-Cuzick Risk Model (IBIS Breast Cancer Risk Evaluation Tool)</h4>
+									<p class="intro-info-exp">This calculator uses the Tyrer-Cuzick or IBIS v8 risk assessment model. For more information on the model, please visit <a href="http://www.ems-trials.org/riskevaluator/" class="rach" target="_blank">http://www.ems-trials.org/riskevaluator/</a></p>
+									
+									<p class="note-info"><strong>*Note:</strong> Competing mortality is turned "ON" for consistency. Competing mortality is the possibility that one may die from causes other than breast cancer.</p>
+									
+									<p class="disclaimer-info"><strong>*Disclaimer:</strong> This information is not intended as a substitute for professional health care and is not intended to replace the evaluation of a healthcare professional. Always consult with a healthcare provider for advice concerning your health. Only your healthcare provider can determine if you have breast cancer. Do not disregard professional medical advice or delay seeking advice or treatment because of something you have read here.</p>
+								</div>		
+								
+						</div>
+					</div><!-- PERSONAL HISTORY Section End -->
+					
+					<h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>QUESTIONNAIRE</h2><div class="resp-tab-content" aria-labelledby="tab_item-1"> <!-- QUESTIONNAIRE Section Start -->
+						<div class="top_tab_content">
+							<!--<h3>Calculate Your Risk</h3>-->
+							<h3>Tyrer-Cuzick Risk Assessment Calculator</h3>
+							<!--<p>MagView's risk calculator can determine the possibility of developing breast cancer within 10 years of your current age and lifetime.  The purpose of this tool is to help you become informed and assist in how you should proceed for genetic counseling and testing.</p>-->
+							
+							<!-- CHILDREN Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx new-form-holder">
+									<div class="frm_label">CHILDREN</div>
+									<div class="frm_fld_res">
+										<label>Have you given birth to one or more children?</label>
+										<!-- Available Options: 0=Nulliparous,1=Parous,2=Unknown -->
+										<div class="radio_res_holder ">
+											<label class="rad_ik_hld">Yes
+											  <input class="cb-status" type="radio" id="have_child_y" name="have_child" value="1">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">No
+											  <input class="cb-status" type="radio" id="have_child_n" name="have_child" value="0"> 
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">I don't know
+											  <input class="cb-status" type="radio" id="have_child_idk" name="have_child" value="2">
+											  <span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									
+								</div>
+								
+								<!-- Age at First Child Birth -->
+								<div class="dis-none_are" style="display: none;">
+									<div class="current_age_input_area">
+										<div class="first_age_portion">
+											<span>Enter age at your first child birth</span>
+										</div>
+										<div class="scnd_age_portion">
+											<input type="text" class="input90" id="agfb" name="age_at_first_birth" value="" maxlength="3" autocomplete="off" onfocus="npsm(this,'agfb','scnd_age_portion')">
+											<div class="spinner">
+												<button type="button" class="up90 button" onclick="scrollup(90,90)">▲</button>
+												<button type="button" class="down90 button" onclick="scrolldown(90,90)">▼</button>
+											</div>
+										</div>
+										<div class="thrd_age_portion">
+											<span>years old</span>
+										</div>
+									</div>
+								</div>
+							
+								<!-- Error Messge Section -->
+								<div class="">
+									<div class="frm_bx">
+										<div class="frm_label"></div>
+										<div class="frm_fld_res">
+											<div id="hc_err" class="invisible">
+												<p class="text-error"></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<!-- CHILDREN Section End -->
+							
+							<!-- MENOPAUSE Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx new-form-holder">
+									<div class="frm_label">MENOPAUSE</div>
+									<div class="frm_fld_res">
+										<label>Have you gone through menopause?</label>
+										<div class="radio_res_holder">
+											<label class="rad_ik_hld">Premenopausal 
+											  <input class="menopause-status" type="radio" id="menopause_y" name="menopause_status" value="0">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">Perimenopausal 
+											  <input class="menopause-status" type="radio" id="menopause_n" name="menopause_status" value="1">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">Postmenopausal
+											  <input class="menopause-status" type="radio" id="menopause_idk" name="menopause_status" value="2">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">No Information 
+											  <input class="menopause-status" type="radio" id="menopause_idk" name="menopause_status" value="3">
+											  <span class="checkmark"></span>
+											</label>
+										</div>
+										
+									</div>
+								</div>
+								
+								<!-- Age at First Child Birth -->
+								<div class="dis-none_are" style="display: none;">
+									<div class="current_age_input_area">
+										<div class="first_age_portion">
+											<span>Enter age at your menopause</span>
+										</div>
+										<div class="scnd_age_portion">
+											<input type="text" class="input91" id="menopause_age" name="menopause_age" value="" maxlength="3" autocomplete="off" onfocus="npsm(this,'menopause_age','scnd_age_portion')">
+											<div class="spinner">
+												<button type="button" class="up91 button" onclick="scrollup(91,91)">▲</button>
+												<button type="button" class="down91 button" onclick="scrolldown(91,91)">▼</button>
+											</div>
+										</div>
+										<div class="thrd_age_portion">
+											<span>years old</span>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Error Messge Section -->
+								<div class="">
+									<div class="frm_bx">
+										<div class="frm_label"></div>
+										<div class="frm_fld_res">
+											<div id="mpause_err" class="invisible">
+												<p class="text-error"></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<!-- MENOPAUSE Section End -->
+							
+							<!-- HRT USAGE Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx">
+									<div class="frm_label">HRT USAGE</div>
+									<div class="frm_fld_res">
+										<label>Have you ever used Hormone Replacement Therapy?</label>
+										<!-- Available Options: 0=Never, 1=Previous user (more than 5 years ago), 2=Previous user (less than 5 years ago), 3=Current user -->
+										<div class="radio_res_holder">
+											<label class="rad_ik_hld">5+ years ago
+											  <input type="radio" name="hrt_usage" class="hrtshow" value="1">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">Less than 5 years ago
+											  <input type="radio" name="hrt_usage" value="2" id="less-5">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">Never
+											  <input type="radio" name="hrt_usage" class="hrtshow" value="0">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">Current user
+											  <input type="radio" name="hrt_usage" value="3" id="currnt-user">
+											  <span class="checkmark"></span>
+											</label>
+										</div>
+										
+										<div id="lessthan-5years" style="display:none;">
+										    <div class="hrtall-area">
+										        <div class="frst-hrtall">
+													<div class="frst-up">
+														<label>Length of use (years):</label>
+														<input type="number" id="lessthen_fiveyr_length" name="hrt_use[ltfivey_length]" value="" autocomplete="off" onkeypress="return validateFloatKeyPress(this,event);" onfocus="npsm(this,'lessthen_fiveyr_length','frst-up')">
+													</div>
+													<div class="frst-down">
+														<label>How long ago HRT last used (years):</label>
+														<input type="number" id="lessthen_fiveyr_duration" name="hrt_use[ltfivey_lastused]" value="" autocomplete="off" onkeypress="return validateFloatKeyPress(this,event);" onfocus="npsm(this,'lessthen_fiveyr_duration','frst-down')">
+													</div>
+												</div>
+												<div class="scnd-hrtall pt-3">
+													<label class="rad_ik_hld">Oestrogen only
+													  <input type="radio" id="lessthen_fiveyr_type1" name="hrt_use[ltfivey_type]" value="0">
+													  <span class="checkmark"></span>
+													</label>
+													<label class="rad_ik_hld">Combined
+													  <input type="radio" id="lessthen_fiveyr_type2" name="hrt_use[ltfivey_type]" value="1" checked="">
+													  <span class="checkmark"></span>
+													</label>
+												</div>
+										    
+										    </div>
+										</div>
+										
+										<div id="current-user" style="display: none;">
+										    <div class="hrtall-area">
+										        <div class="frst-hrtall">
+													<div class="frst-up">
+														<label>Length of use (years):</label>
+														<input type="number" id="crntuser_length" name="hrt_use[crntuser_length]" value="" autocomplete="off" onkeypress="return validateFloatKeyPress(this,event);" onfocus="npsm(this,'crntuser_length','frst-up')">
+													</div>
+													<div class="frst-down">
+														<label>Intended length of use (years):</label>
+														<input type="number" id="crntuser_intended_length" name="hrt_use[crntuser_intended_length]" value="2" autocomplete="off" onkeypress="return validateFloatKeyPress(this,event);" onfocus="npsm(this,'crntuser_intended_length','frst-down')">
+													</div>
+												</div>
+												<div class="scnd-hrtall pt-3">
+													<label class="rad_ik_hld">Oestrogen only
+													  <input type="radio" id="crntuser_type1" name="hrt_use[crntuser_type]" value="0">
+													  <span class="checkmark"></span>
+													</label>
+													<label class="rad_ik_hld">Combined
+													  <input type="radio" id="crntuser_type2" name="hrt_use[crntuser_type]" value="1" checked="">
+													  <span class="checkmark"></span>
+													</label>
+												</div>
+										    
+										    </div>
+										</div>										
+										
+										<!-- Error Messge Section -->
+										<div id="hrt_err" class="invisible">
+											<p class="text-error"></p>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- HRT USAGE Section End -->
+							
+							<!-- BRCA Gene Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx">
+									<div class="frm_label">BRCA Gene</div>
+									<div class="frm_fld_res">
+										<label>Do you have a mutation in either the BRCA1 or BRCA2 gene?</label>
+										<!-- Available Options: 0=Never,1=Test result negative,2=BRCA1,3=BRCA2,Set to 0 if unknown. -->
+										
+										<!-- As Per Request (IBIS Application)  0=No test,1=Negative,2=BRCA1,3=BRCA2 -->
+										<div class="radio_res_holder">
+											<label class="rad_ik_hld">No test
+											  <input type="radio" name="brca_gene" value="0">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">Negative
+											  <input type="radio" name="brca_gene" value="1">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">BRCA1
+											  <input type="radio" name="brca_gene" value="2">
+											  <span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld dis-blk">BRCA2
+											  <input type="radio" name="brca_gene" value="3">
+											  <span class="checkmark"></span>
+											</label>											
+										</div>
+										
+										<!-- Error Messge Section -->
+										<div id="wgene_err" class="invisible">
+											<p class="text-error"></p>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- BRCA Gene Section End -->
+							
+							<!-- Breast Biopsy Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx">
+									<div class="frm_label">Breast Biopsy</div>
+									<div class="frm_fld_res agn-new-frm-fld">
+										<label>Have you had a breast biopsy?</label>
+										<!-- Available Options: 0=Never,1=Test result negative,2=BRCA1,3=BRCA2,Set to 0 if unknown. -->
+										
+										<!-- As Per Request (IBIS Application)  0=No test,1=Negative,2=BRCA1,3=BRCA2 -->
+										<div class="radio_res_holder new-radio-res-holder">
+											<label class="rad_ik_hld" style="display: none;">No prior biopsy / No proliferative disease
+												<input type="radio" name="breast_biopsy" value="0" checked="checked">
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld" style="display: none;">Prior biopsy, result unknown
+												<input type="radio" name="breast_biopsy" value="2">
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld" style="display: none;">Hyperplasia (not atypia)
+												<input type="radio" name="breast_biopsy" value="1">
+												<span class="checkmark"></span>
+											</label>
+											<label class="cont">Atypical Hyperplasia
+												<input type="checkbox" class="biopsy-check-bx" name="atypical_hyperplasia" value="1">
+												<span class="checkmark"></span>
+											</label>	
+											<label class="cont">Lobular Carcinoma in Situ (LCIS)
+												<input type="checkbox" class="biopsy-check-bx" name="lcis" value="1">
+												<span class="checkmark"></span>
+											</label>									
+										</div>
+										
+										<!-- Error Messge Section -->
+										<!--<div id="bbiopsy_err" class="invisible">
+											<p class="text-error"></p>
+										</div>-->
+										
+									</div>
+								</div>
+							</div>
+							<!-- Breast Biopsy Section End -->
+							
+							<!-- Woman Ovarian Cancer Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx">
+									<div class="frm_label">Ovarian cancer</div>
+									<div class="frm_fld_res">
+										<label>Have you had ovarian cancer?</label>
+										<!-- Available Options: 0=No or Unknown, 1=Yes -->
+										<div class="radio_res_holder ">
+											<label class="rad_ik_hld">Yes
+												<input class="over-yes" type="radio" id="has_oc_y" name="has_oc" value="1">
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">No
+												<input class="over-no" type="radio" id="has_oc_n" name="has_oc" value="0"> 
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">I don't know
+												<input class="over-no" type="radio" id="has_oc_un" name="has_oc" value="0">
+												<span class="checkmark"></span>
+											</label>											
+										</div>
+
+										<div class="new-ovrn-bx" style="display: none;">
+											<div class="current_age_input_area" style="justify-content:start;">
+												<div class="first_age_portion">
+													<span>Enter age</span>
+												</div>
+												<div class="scnd_age_portion">
+													<input type="text" class="input130" id="age_at_oc" name="age_at_oc" value="" autocomplete="off" maxlength="3" onfocus="npsm(this,'age_at_oc','scnd_age_portion')">
+													<div class="spinner">
+														<button type="button" class="up130 button" onclick="scrollup(130,130)">▲</button>
+														<button type="button" class="down130 button" onclick="scrolldown(130,130)">▼</button>
+													</div>
+												</div>
+												<div class="thrd_age_portion">
+													<span>years old</span>
+												</div>
+											</div>
+										</div>
+										
+										<!-- Error Messge Section -->
+										<div id="woc_err" class="invisible">
+											<p class="text-error"></p>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- Woman Ovarian Cancer Section End -->
+							
+							<!-- Breast Density Measure Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx">
+									<div class="frm_label">Breast Density Measure</div>
+									<div class="frm_fld_res">
+										<label>Have you ever measured your Breast Density?</label>
+										<!-- Available Options: 0=%Volpara® Volumetric Density, 1=%VAS Percentage Density, 2=BI-RADS® ATLAS Density -->
+										<div class="radio_res_holder">
+											<div class="flexarea">
+												<label class="rad_ik_hld">BI-RADS® ATLAS Density
+												<input type="radio" class="bi-rads" name="breast_density_option" value="2" checked="checked">
+												<span class="checkmark"></span>
+												</label>
+												<div class="new-brst-dnsty-select-bx" style="">
+												   <div class="current_age_input_area" style="justify-content:start;">
+												    <div class="first_age_portion">
+														<span>Density Value</span>
+													</div>
+													<select id="density_value_option" name="density_value_option">
+														<option value="1">a. Almost entirely fatty</option>
+														<option value="2">b. Scattered fibroglandular density</option>
+														<option value="3">c. Heterogeneously dense</option>
+														<option value="4">d. Extremely dense</option>
+														<option value="-99" selected="selected">I don't know</option>
+													</select>
+													</div>
+												</div>
+											</div>
+											
+											<label class="rad_ik_hld">%Volpara® Volumetric Density
+												<input type="radio" class="brst-density" name="breast_density_option" value="0">
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">%VAS Percentage Density
+												<input type="radio" class="brst-density" name="breast_density_option" value="1">
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">I don't know
+												<input type="radio" class="idk-brst-density" name="breast_density_option" value="-99">
+												<span class="checkmark"></span>
+											</label>											
+										</div>
+										
+										<div class="new-brst-dnsty-age-bx" style="display: none;">
+											<div class="current_age_input_area" style="justify-content:start;">
+												<div class="first_age_portion">
+													<span>Density Value</span>
+												</div>
+												<div class="scnd_age_portion">
+													<input type="number" id="density_value" name="density_value" value="" autocomplete="off" onfocus="np(this,'density_value','scnd_age_portion')"><!-- onkeypress="return validateFloatKeyPress(this,event);" -->
+												</div>
+												<div class="thrd_age_portion"></div>
+											</div>													
+										</div>
+										
+										<!-- Error Messge Section -->
+										<div id="bdensity_err" class="invisible">
+											<p class="text-error"></p>
+										</div>
+									
+									</div>
+								</div>
+							</div>
+							<!-- Breast Density Measure Section End -->
+                           
+						    <!-- Ashkenazi inheritance Section Start -->
+							<div class="form_holder_res">
+								<div class="frm_bx new-form-holder">
+									<div class="frm_label">Ashkenazi Inheritance</div>
+									<div class="frm_fld_res">
+										<label>Do you have any Ashkenazi Inheritance?</label>
+										<!-- Available Options: 0=No on Unknown, 1=Yes -->
+										<div class="radio_res_holder ">
+											<label class="rad_ik_hld">Yes
+												<input class="ask-inhr-yes" type="radio" id="" name="ashkanazi_jewish_heritage" value="1">
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">No
+												<input class="ask-inhr" type="radio" id="" name="ashkanazi_jewish_heritage" value="0"> 
+												<span class="checkmark"></span>
+											</label>
+											<label class="rad_ik_hld">I don't know
+												<input class="ask-inhr" type="radio" id="" name="ashkanazi_jewish_heritage" value="0">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							 <!-- Ashkenazi inheritance Section End -->
+							
+							<a href="javascript:void(0)" class="next_btn_res prev_btn_1" id="questionnaire_prev">BACK</a><!-- Back Button to PERSONAL HISTORY Tab -->
+							<a href="javascript:void(0)" id="htab2_next" class="next_btn_res">NEXT</a><!-- Validate Button -->	
+							<a href="javascript:void(0)" class="next_btn_res next_btn_3" id="questionnaire_next" style="">NEXT</a><!-- Next Button to FAMILY HISTORY Tab -->
+							
+						</div>
+					</div><!-- QUESTIONNAIRE Section End -->
+					
+					<!-- FAMILY HISTORY (New Design) Section Start -->
+					<h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>FAMILY HISTORY</h2><div class="resp-tab-content" aria-labelledby="tab_item-2">
+						<div class="top_tab_content">
+							<!--<h3>Calculate Your Risk</h3>-->
+							<h3>Tyrer-Cuzick Risk Assessment Calculator</h3>
+							<!--<p>MagView's risk calculator can determine the possibility of developing breast cancer within 10 years of your current age and lifetime.  The purpose of this tool is to help you become informed and assist in how you should proceed for genetic counseling and testing.</p>-->
+							<div class="new-all-vertical-tab-hld">
+								<ul class="nav nav-tabs new-ver-side-li">
+									<li class="active"><a class="family-member" href="#tab1" data-toggle="tab" data-divid="tab1">Mother</a></li>
+									<li><a class="family-member" href="#tab2" data-toggle="tab" data-divid="tab2">Father</a></li>
+									<li><a class="family-member" href="#tab3" data-toggle="tab" data-divid="tab3">Sister</a></li>
+									<li><a class="family-member" href="#tab4" data-toggle="tab" data-divid="tab4">Daughter</a></li>
+									<li><a class="family-member" href="#tab5" data-toggle="tab" data-divid="tab5">Brother</a></li>
+									<li><a class="family-member" href="#tab6" data-toggle="tab" data-divid="tab6">Paternal Grandmother</a></li>
+									<li><a class="family-member" href="#tab7" data-toggle="tab" data-divid="tab7">Paternal Aunt</a></li>
+									<li><a class="family-member" href="#tab8" data-toggle="tab" data-divid="tab8">Paternal Half Sister</a></li>
+									<li><a class="family-member" href="#tab9" data-toggle="tab" data-divid="tab9">Paternal Uncle's Daughter</a></li>
+									<li><a class="family-member" href="#tab10" data-toggle="tab" data-divid="tab10">Maternal Grandmother</a></li>
+									<li><a class="family-member" href="#tab11" data-toggle="tab" data-divid="tab11">Maternal Aunt</a></li>
+									<li><a class="family-member" href="#tab12" data-toggle="tab" data-divid="tab12">Maternal Half Sister</a></li>
+									<li><a class="family-member" href="#tab13" data-toggle="tab" data-divid="tab13">Maternal Uncle's Daughter</a></li>
+								</ul>
+								
+								<div class="tab-content new-ver-tab-cont">
+								
+									<!-- Mother Details Section Start -->
+									<div class="tab-pane active" id="tab1">
+										
+										<div class="sister_heading mnhd">
+											<div class="hding">
+												<figure>
+													<img src="images/mom.png" alt="">
+												</figure>
+											</div>
+											<h2><span>cancer history</span>Mother</h2>
+											
+											<span class="help help_new" data-toggle="tooltip" data-placement="bottom" title="Select your mother's cancer type and enter the age it developed">Help</span>
+										</div>
+										
+										<div class="sister_details_holder_tb">
+											<div class="sis_cn w-100 new_sis">
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your mother had breast cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass1 bc_check_1" value="1" id="chk_bc" name="mother[has_breast_cancer]" onclick="ps('chk_bc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass1" value="0" id="chk_bc" name="mother[has_breast_cancer]" onclick="ps('chk_bc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass1" value="0" id="chk_bc" name="mother[has_breast_cancer]" onclick="ps('chk_bc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class=""><!-- class="dis-none_are" -->
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Current age OR Age at death</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input30" id="mca" name="mother[current_age]" value="" maxlength="3" autocomplete="off" onblur="as('mca','mblc');" onfocus="npsm(this,'mca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up30 button" onclick="scrollup(30,30)">▲</button>
+																<button type="button" class="down30 button" onclick="scrolldown(30,30)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+												
+
+												<div class="form_holder_res new-form-holder" style="display:none;">
+													<div class="frm_bx">
+														
+														<div class="frm_fld_res w-100 text-center">
+															<label>Was your mother's breast cancer bilateral?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" checked="" class="new-checkboxclass2 bic_check" value="1" id="chk_bic" name="mother[has_bilateral_cancer]" data-cid="1" onclick="ps('chk_bic','chk_bc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" checked="" class="new-checkboxclass2" value="0" id="chk_bic" name="mother[has_bilateral_cancer]" onclick="ps('chk_bic','chk_bc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass2" value="0" id="chk_bic" name="mother[has_bilateral_cancer]" onclick="ps('chk_bic','chk_bc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dis-none_are">  
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Enter Age</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input31" id="mblc" name="mother[bilateral_cancer_age]" value="" maxlength="3" autocomplete="off" onblur="as('mblc','mca')" onfocus="npsm(this,'mblc','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up31 button" onclick="scrollup(31,31)">▲</button>
+																<button type="button" class="down31 button" onclick="scrolldown(31,31)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your mother had ovarian cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" checked="" class="new-checkboxclass3" value="1" id="chk_oc" name="mother[has_ovarian_cancer]" onclick="ps('chk_oc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" checked="" class="new-checkboxclass3" value="0" id="chk_oc" name="mother[has_ovarian_cancer]" onclick="ps('chk_oc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass3" value="0" id="chk_oc" name="mother[has_ovarian_cancer]" onclick="ps('chk_oc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dis-none_are"> 
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Enter Age</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input32" id="moca" name="mother[ovarian_cancer_age]" value="" maxlength="3" autocomplete="off" onblur="as('moca')" onfocus="npsm(this,'moca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up32 button" onclick="scrollup(32,32)">▲</button>
+																<button type="button" class="down32 button" onclick="scrolldown(32,32)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="frm_fld_res w-100 text-center  new-form-holder">
+													<label>Has your mother had BRCA genetic testing?</label>
+													<div class="radio_res_holder new_radio_holder">
+														<label class="rad_ik_hld cal_new">No test
+														   <input type="radio" checked="" value="0" name="mother[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">Negative
+														  <input type="radio" value="1" name="mother[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA1
+														  <input type="radio" value="2" name="mother[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA2
+														  <input type="radio" value="3" name="mother[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<!-- Button Controls Start -->
+										<!-- <a class="btnNext" onclick="goto_next_vtab()" >Father Details <i class="fa fa-arrow-circle-right"></i></a> -->
+										<!-- Button Controls End -->
+										
+										<div class="button-group">
+											<a class="btnPrevious bttn invisible" onclick="goto_previous_vtab()"><span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+											<a class="btnNext bttn" onclick="vei('M','current_age','chk_bc','mca','bc','chk_bic','mblc','bic','chk_oc','moca','oc')">Father Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+										</div>
+												
+									</div>
+									<!-- Mother Details Section End -->
+									
+									<!-- Father Details Section Start -->	
+									<div class="tab-pane" id="tab2">
+										<div class="sister_heading mnhd">
+											<div class="hding">
+												<figure>
+													<img src="images/father.png" alt="">
+												</figure>
+											</div>
+											<h2><span>cancer history</span>Fathers</h2>
+
+											<span class="help help_new" data-toggle="tooltip" data-placement="bottom" title="Select your father's cancer type and enter the age it developed">Help</span>
+										</div>
+
+										<div class="sister_details_holder_tb">
+											<div class="sis_cn w-100 new_sis">
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your father had breast cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass4" id="chk_fbc" name="father_has_breast_cancer" value="1" onclick="ps('chk_fbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass4" id="chk_fbc" name="father_has_breast_cancer" value="0" onclick="ps('chk_fbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass4" id="chk_fbc" name="father_has_breast_cancer" value="0" onclick="ps('chk_fbc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class=""><!-- class="dis-none_are" -->
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Current age OR Age at death</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input33" id="fca" value="" maxlength="3" autocomplete="off" onblur="as('fca')" onfocus="npsm(this,'fca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up33 button" onclick="scrollup(33,33)">▲</button>
+																<button type="button" class="down33 button" onclick="scrolldown(33,33)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+												<div class="frm_fld_res w-100 text-center  new-form-holder">
+													<label>Has your father had BRCA genetic testing?</label>
+													<div class="radio_res_holder new_radio_holder">
+														<label class="rad_ik_hld cal_new">No test
+														   <input type="radio" checked="" value="0" name="brca_gene_father">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">Negative
+														  <input type="radio" value="1" name="brca_gene_father">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA1
+														  <input type="radio" value="2" name="brca_gene_father">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA2
+														  <input type="radio" value="3" name="brca_gene_father">
+														  <span class="checkmark"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+										
+										<!-- Button Controls Start -->
+										<!-- <a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Mother Details</a>
+										<a class="btnNext" onclick="goto_next_vtab()" >Sister Details <i class="fa fa-arrow-circle-right"></i></a> -->
+										<!-- Button Controls End -->
+										
+										<div class="button-group">
+											<a class="btnPrevious bttn" onclick="goto_previous_vtab()">Mother Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+											<a class="btnNext bttn" onclick="vei('F','current_age','chk_fbc','fca','bc')">Sister Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+										</div>
+									
+									</div>
+									<!-- Father Details Section End -->	
+									
+									<!-- Sister(s) Details Section Start -->
+									<div class="tab-pane" id="tab3">
+										
+										<div class="fade-first" id="sister_div">
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/twins.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Sisters</h2>
+											</div>
+											
+											
+											<div class="sister_details new-sister-details">
+												<div class="sis_num">
+													<label>Number of sisters</label>
+													<div class="cont-btn">
+														<input type="text" class="input12" id="sister_count" name="sister_count" value="" maxlength="1" onfocus="npsm(this,'sister_count','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up12 button" onclick="scrollup(12,12)">▲</button>
+															<button type="button" class="down12 button" onclick="scrolldown(12,12)">▼</button>
+														</div>
+													</div>	
+													
+													<a class="btnNext agnbtnNext" id="sister_next">Go to Details</a> 
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="sisno_err" class="invisible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+											
+											<!-- Button Controls Start -->
+											<!--<a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Father Details</a>
+											<a class="btnNext agnbtnNext" " id="sister_next" >Go to Details</a> 
+											<a class="btnNext" onclick="goto_next_vtab()" >Daughter Details <i class="fa fa-arrow-circle-right"></i></a>-->
+											<!-- Button Controls End -->
+											
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Father Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn" onclick="goto_next_vtab()">Daughter Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>
+										
+										</div>	
+
+										
+										<div id="sister_panel"></div>
+										
+										
+									
+									</div>
+									<!-- Sister(s) Details Section End -->									
+									
+									<!-- Daughter(s) Details Section Start -->
+									<div class="tab-pane" id="tab4">
+										<div class="fade-first" id="daughter_div">											
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/daughter.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Daughter</h2>
+												
+											</div>
+											<div class="sister_details new-sister-details">
+												<div class="sis_num">
+													<label>Number of Daughter</label>
+													<div class="cont-btn">
+														<input type="text" class="input13" id="no_of_daughters" name="no_of_daughters" value="" maxlength="1" onfocus="npsm(this,'no_of_daughters','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up13 button" onclick="scrollup(13,13)">▲</button>
+															<button type="button" class="down13 button" onclick="scrolldown(13,13)">▼</button>
+														</div>
+													</div>	
+													<a class="btnNext agnbtnNext" id="daughter_next">Go to Details</a>
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="dauno_err" class="invisible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+											
+											<!-- Button Controls Start -->
+											<!--<a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Sister Details</a>
+											<a class="btnNext" id="daughter_next" >Go to Details</a> 
+											<a class="btnNext" onclick="goto_next_vtab()" >Brother Details <i class="fa fa-arrow-circle-right"></i></a>-->
+											<!-- Button Controls End -->
+											
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Sister Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn" onclick="goto_next_vtab()">Brother Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>
+										
+										</div>
+											
+										<div id="daughter_panel"></div>	
+											
+									</div> 									
+									<!-- Daughter(s) Details Section End -->
+									
+									<!-- Brother Details Section Start -->
+									<div class="tab-pane" id="tab5">
+										<div class="sister_heading mnhd">
+											<div class="hding">
+												<figure>
+													<img src="images/brother.png" alt="">
+												</figure>
+											</div>
+											
+											<h2><span>cancer history</span>Brother</h2>
+											
+											<span class="help help_new" data-toggle="tooltip" data-placement="bottom" title="Select your brother's cancer type and enter the age it developed">Help</span>
+										</div>
+										
+										<div class="sister_details_holder_tb">
+											<div class="sis_cn w-100 new_sis">
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your brother had breast cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																	<input type="radio" class="new-checkboxclass5" value="1" id="chk_bbc" name="brother_has_breast_cancer" onclick="ps('chk_bbc')">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																	<input type="radio" class="new-checkboxclass5" value="0" id="chk_bbc" name="brother_has_breast_cancer" onclick="ps('chk_bbc')">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																	<input type="radio" checked="" class="new-checkboxclass5" value="0" id="chk_bbc" name="brother_has_breast_cancer" onclick="ps('chk_bbc')">
+																	<span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class=""><!-- class="dis-none_are" -->
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Current age OR Age at death</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input34" id="bca" value="" maxlength="3" autocomplete="off" onblur="as('bca')" onfocus="npsm(this,'bca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up34 button" onclick="scrollup(34,34)">▲</button>
+																<button type="button" class="down34 button" onclick="scrolldown(34,34)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+												<input type="hidden" id="no_of_brother_daughter" name="no_of_brother_daughter" value="">
+												<div class="wrapper">
+													<div class="result_brother"></div>
+													<div class="add-nicearea">
+														<h5>Do any of your brothers have a daughter with a history of breast or ovarian cancer?</h5>
+														<a class="adnc" id="add_nice_brother" onclick="add_brother_daughter()">Add Niece</a>
+
+													</div>
+												</div>
+
+											</div>
+
+										</div>
+										
+										<!-- Button Controls Start -->
+										<!-- <a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Daughter Details</a>
+										<a class="btnNext" onclick="goto_next_vtab()" >Paternal Grandmother Details <i class="fa fa-arrow-circle-right"></i></a> -->
+										<!-- Button Controls End -->
+										
+										<div class="button-group">
+											<a class="btnPrevious bttn" onclick="goto_previous_vtab()">Daughter Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+											<a class="btnNext bttn" onclick="vei('B','chk_bbc','bca','bc')">Paternal Grandmother Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+										</div>
+										
+									</div>
+									<!-- Brother Details Section End -->
+									
+									<!-- Paternal Grandmother Details Section Start -->
+									<div class="tab-pane" id="tab6">
+										<div class="sister_heading mnhd">
+											<div class="hding">
+												<figure>
+													<img src="images/grand_mom.png" alt="">
+												</figure>
+											</div>
+											<h2><span>cancer history</span>Paternal Grandmother</h2>
+
+											<span class="help help_new" data-toggle="tooltip" data-placement="bottom" title="Select your paternal grandmother's cancer type and enter the age it developed">Help</span>
+										</div>
+										
+										<div class="sister_details_holder_tb">
+											<div class="sis_cn w-100 new_sis">
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your paternal grandmother had breast cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass100 bc_check_2" value="1" id="chk_pgbc" name="paternal_gran[has_breast_cancer]" onclick="ps('chk_pgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass100" value="0" id="chk_pgbc" name="paternal_gran[has_breast_cancer]" onclick="ps('chk_pgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass100" value="0" id="chk_pgbc" name="paternal_gran[has_breast_cancer]" onclick="ps('chk_pgbc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class=""><!-- class="dis-none_are" -->
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Current age or age at death</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input35" id="pgca" name="paternal_gran[current_age]" value="" maxlength="3" autocomplete="off" onblur="as('pgca','pgbca')" onfocus="npsm(this,'pgca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up35 button" onclick="scrollup(35,35)">▲</button>
+																<button type="button" class="down35 button" onclick="scrolldown(35,35)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+												
+
+												<div class="form_holder_res new-form-holder" style="display:none;">
+													<div class="frm_bx">
+														<div class="frm_fld_res w-100 text-center">
+															<label>Was your paternal grandmother's breast cancer bilateral?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass7 bic_check" value="1" id="chk_pgbic" name="paternal_gran[has_bilateral_cancer]" data-cid="2" onclick="ps('chk_pgbic','chk_pgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass7" value="0" id="chk_pgbic" name="paternal_gran[has_bilateral_cancer]" onclick="ps('chk_pgbic','chk_pgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass7" value="0" id="chk_pgbic" name="paternal_gran[has_bilateral_cancer]" onclick="ps('chk_pgbic','chk_pgbc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dis-none_are">  
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Enter Age</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input36" id="pgbca" name="paternal_gran[bilateral_cancer_age]" value="" maxlength="3" autocomplete="off" onblur="as('pgbca','pgca')" onfocus="npsm(this,'pgbca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up36 button" onclick="scrollup(36,36)">▲</button>
+																<button type="button" class="down36 button" onclick="scrolldown(36,36)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your paternal grandmother had ovarian cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass8" value="1" id="chk_pgoc" name="paternal_gran[has_ovarian_cancer]" onclick="ps('chk_pgoc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass8" value="0" id="chk_pgoc" name="paternal_gran[has_ovarian_cancer]" onclick="ps('chk_pgoc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass8" value="0" id="chk_pgoc" name="paternal_gran[has_ovarian_cancer]" onclick="ps('chk_pgoc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dis-none_are"> 
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Enter Age</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input37" id="pgoca" name="paternal_gran[ovarian_cancer_age]" value="" maxlength="3" autocomplete="off" onblur="as('pgoca')" onfocus="npsm(this,'pgoca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up37 button" onclick="scrollup(37,37)">▲</button>
+																<button type="button" class="down37 button" onclick="scrolldown(37,37)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="frm_fld_res w-100 text-center  new-form-holder">
+													<label>Has your paternal grandmother had BRCA genetic testing?</label>
+													<div class="radio_res_holder new_radio_holder">
+														<label class="rad_ik_hld cal_new">No test
+														   <input type="radio" checked="" value="0" name="paternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">Negative
+														  <input type="radio" value="1" name="paternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA1
+														  <input type="radio" value="2" name="paternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA2
+														  <input type="radio" value="3" name="paternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<!-- Button Controls Start -->
+										<!-- <a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Brother Details</a>
+										<a class="btnNext" onclick="goto_next_vtab()" >Paternal Aunt Details <i class="fa fa-arrow-circle-right"></i></a> -->
+										<!-- Button Controls End -->
+										
+										<div class="button-group">
+											<a class="btnPrevious bttn" onclick="goto_previous_vtab()">Brother Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+											<a class="btnNext bttn" onclick="vei('PG','current_age','chk_pgbc','pgca','bc','chk_pgbic','pgbca','bic','chk_pgoc','pgoca','oc')">Paternal Aunt Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+										</div>
+										
+									</div>
+									<!-- Paternal Grandmother Details Section End -->
+									
+									<!-- Paternal Aunt Details Section Start -->
+									<div class="tab-pane" id="tab7">
+										
+										<div class="fade-first" id="paunt_div">
+											
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/unty.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Paternal Aunt</h2>
+											</div>
+												
+											<div class="sister_details new-sister-details">
+												<div class="sis_num">
+													<label>Number of Paternal Aunt</label>
+													<div class="cont-btn">
+														<input type="text" class="input14" id="no_of_patenal_aunts" name="no_of_patenal_aunts" value="" maxlength="1" onfocus="npsm(this,'no_of_patenal_aunts','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up14 button" onclick="scrollup(14,14)">▲</button>
+															<button type="button" class="down14 button" onclick="scrolldown(14,14)">▼</button>
+														</div>
+													</div>	
+													
+													<a class="btnNext agnbtnNext" id="paunt_next">Go to Details</a> 
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="pauntno_err" class="invisible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+												
+											<!-- Button Controls Start -->
+											<!--<a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Paternal Grandmother Details</a>
+											<a class="btnNext" id="paunt_next" >Go to Details</a> 
+											<a class="btnNext" onclick="goto_next_vtab()" >Paternal Half Sister Details <i class="fa fa-arrow-circle-right"></i></a>-->
+											<!-- Button Controls End -->
+											
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Paternal Grandmother Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn" onclick="goto_next_vtab()">Paternal Half Sister Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>
+											
+												
+										</div>
+										
+										<div id="paunt_panel"></div>	
+										
+									</div> 
+									<!-- Paternal Aunt Details Section End -->
+									
+									<!-- Paternal Half Sister Details Section Start -->
+									<div class="tab-pane" id="tab8">
+										
+										<div class="fade-first" id="phsis_div">
+													
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/half-sister.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Paternal Half Sister</h2>
+											</div>
+											
+											<div class="sister_details new-sister-details">
+												<div class="sis_num">
+													<label>Number of Paternal Half Sister</label>
+													<div class="cont-btn">
+														<input type="text" class="input15" id="total_paternal_half_sister" name="total_paternal_half_sister" value="" maxlength="1" onfocus="npsm(this,'total_paternal_half_sister','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up15 button" onclick="scrollup(15,15)">▲</button>
+															<button type="button" class="down15 button" onclick="scrolldown(15,15)">▼</button>
+														</div>
+													</div>
+													
+													<a class="btnNext agnbtnNext" id="phsis_next">Go to Details</a>
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="phsisno_err" class="invisible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+											
+											<!-- Button Controls Start -->
+											<!--<a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Paternal Aunt Details</a>
+											<a class="btnNext" id="phsis_next" >Go to Details</a> 
+											<a class="btnNext" onclick="goto_next_vtab()" >Paternal Uncle's Daughter Details <i class="fa fa-arrow-circle-right"></i></a>-->
+											<!-- Button Controls End -->	
+
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Paternal Aunt Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn" onclick="goto_next_vtab()">Paternal Uncle's Daughter Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>		
+												
+										</div> 
+										
+										<div id="phsis_panel"></div>
+										
+									</div>
+									<!-- Paternal Half Sister Details Section End -->
+									
+									<!-- Paternal Uncle's Daughter Details Section Start -->									
+									<div class="tab-pane" id="tab9">
+										
+										<div class="fade-first" id="pudaughter_div">
+										
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/daughter.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Paternal Uncle's Daughter</h2>
+											</div>
+											
+											<div class="sister_details new-sister-details">
+												<div class="sis_num">
+													<label>Number of Paternal Uncle's Daughter</label>
+													<div class="cont-btn">
+														<input type="text" class="input16" id="no_of_puncle_daughter" name="no_of_puncle_daughter" value="" maxlength="1" onfocus="npsm(this,'no_of_puncle_daughter','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up16 button" onclick="scrollup(16,16)">▲</button>
+															<button type="button" class="down16 button" onclick="scrolldown(16,16)">▼</button>
+														</div>
+													</div>
+													
+													<a class="btnNext agnbtnNext" id="pudaughter_next">Go to Details</a> 
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="pudauno_err" class="invisible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+											
+											<!-- Button Controls Start -->
+											<!--<a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Paternal Half Sister Details</a>
+											<a class="btnNext" id="pudaughter_next" >Go to Details</a> 
+											<a class="btnNext" onclick="goto_next_vtab()" >Maternal Grandmother Details <i class="fa fa-arrow-circle-right"></i></a>-->
+											<!-- Button Controls End -->
+											
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Paternal Half Sister Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn" onclick="goto_next_vtab()">Maternal Grandmother Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>
+											
+										</div>
+										
+										<div id="pudaughter_panel"></div>
+												
+									</div>
+									<!-- Paternal Uncle's Daughter Details Section End -->
+									
+									
+									<!-- Maternal Grandmother Details Section Start -->
+									<div class="tab-pane" id="tab10">
+										
+										<div class="sister_heading mnhd">
+											<div class="hding">
+												<figure>
+													<img src="images/grand_mom.png" alt="">
+												</figure>
+											</div>
+											
+											<h2><span>cancer history</span>Maternal Grandmother</h2>
+											
+											<span class="help help_new" data-toggle="tooltip" data-placement="bottom" title="Select your maternal grandmother's cancer type and enter the age it developed">Help</span>
+										</div>
+										
+										<div class="sister_details_holder_tb">
+											<div class="sis_cn w-100 new_sis">
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your maternal grandmother had breast cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass37 bc_check_3" value="1" id="chk_mgbc" name="maternal_gran[has_breast_cancer]" onclick="ps('chk_mgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass37" value="0" id="chk_mgbc" name="maternal_gran[has_breast_cancer]" onclick="ps('chk_mgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass37" value="0" id="chk_mgbc" name="maternal_gran[has_breast_cancer]" onclick="ps('chk_mgbc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class=""><!-- class="dis-none_are" -->
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Current age or age at death</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input38" id="mgca" name="maternal_gran[current_age]" value="" maxlength="3" autocomplete="off" onblur="as('mgca','mgbca')" onfocus="npsm(this,'mgca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up38 button" onclick="scrollup(38,38)">▲</button>
+																<button type="button" class="down38 button" onclick="scrolldown(38,38)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+												
+
+												<div class="form_holder_res new-form-holder" style="display:none;">
+													<div class="frm_bx">
+														
+														<div class="frm_fld_res w-100 text-center">
+															<label>Was your maternal grandmother's breast cancer bilateral?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass10 bic_check" value="1" id="chk_mgbic" name="maternal_gran[has_bilateral_cancer]" data-cid="3" onclick="ps('chk_mgbic','chk_mgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass10" value="0" id="chk_mgbic" name="maternal_gran[has_bilateral_cancer]" onclick="ps('chk_mgbic','chk_mgbc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass10" value="0" id="chk_mgbic" name="maternal_gran[has_bilateral_cancer]" onclick="ps('chk_mgbic','chk_mgbc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dis-none_are">  
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Enter Age</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input39" id="mgbca" name="maternal_gran[bilateral_cancer_age]" value="" maxlength="3" autocomplete="off" onblur="as('mgbca','mgca')" onfocus="npsm(this,'mgbca','scnd_age_portion')">
+															<div class="spinner">
+																<button type="button" class="up39 button" onclick="scrollup(39,39)">▲</button>
+																<button type="button" class="down39 button" onclick="scrolldown(39,39)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="form_holder_res new-form-holder">
+													<div class="frm_bx">
+														<div class="frm_fld_res w-100 text-center">
+															<label>Has your maternal grandmother had ovarian cancer?</label>
+															<div class="radio_res_holder new_radio_holder">
+																<label class="rad_ik_hld cal_new">Yes
+																  <input type="radio" class="new-checkboxclass11" value="1" id="chk_mgoc" name="maternal_gran[has_ovarian_cancer]" onclick="ps('chk_mgoc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">No
+																  <input type="radio" class="new-checkboxclass11" value="0" id="chk_mgoc" name="maternal_gran[has_ovarian_cancer]" onclick="ps('chk_mgoc')">
+																  <span class="checkmark"></span>
+																</label>
+																<label class="rad_ik_hld cal_new">I don't know
+																  <input type="radio" checked="" class="new-checkboxclass11" value="0" id="chk_mgoc" name="maternal_gran[has_ovarian_cancer]" onclick="ps('chk_mgoc')">
+																  <span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dis-none_are"> 
+													<div class="current_age_input_area">
+														<div class="first_age_portion">
+															<span>Enter Age</span>
+														</div>
+														<div class="scnd_age_portion">
+															<input type="text" class="input40" id="mgoca" name="maternal_gran[ovarian_cancer_age]" value="" maxlength="3" autocomplete="off" onblur="as('mgoca')">
+															<div class="spinner">
+																<button type="button" class="up40 button" onclick="scrollup(40,40)">▲</button>
+																<button type="button" class="down40 button" onclick="scrolldown(40,40)">▼</button>
+															</div>
+														</div>
+														<div class="thrd_age_portion">
+															<span>years old</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="frm_fld_res w-100 text-center  new-form-holder">
+													<label>Has your maternal grandmother had BRCA genetic testing?</label>
+													<div class="radio_res_holder new_radio_holder">
+														<label class="rad_ik_hld cal_new">No test
+														   <input type="radio" checked="" value="0" name="maternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">Negative
+														  <input type="radio" value="1" name="maternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA1
+														  <input type="radio" value="2" name="maternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+														<label class="rad_ik_hld cal_new">BRCA2
+														  <input type="radio" value="3" name="maternal_gran[genetic_testing]">
+														  <span class="checkmark"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<!-- Button Controls Start -->
+										<!-- <a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Paternal Uncle's Daughter Details</a>
+										<a class="btnNext" onclick="goto_next_vtab()" >Maternal Aunt Details <i class="fa fa-arrow-circle-right"></i></a> -->
+										<!-- Button Controls End -->
+										
+										<div class="button-group">
+											<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Paternal Uncle's Daughter Details <span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+											<a class="btnNext bttn" onclick="vei('MG','current_age','chk_mgbc','mgca','bc','chk_mgbic','mgbca','bic','chk_mgoc','mgoca','oc')">Maternal Aunt Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+										</div>
+										
+										
+									</div>
+									<!-- Maternal Grandmother Details Section End -->
+									
+									<!-- Maternal Aunt Details Section Start -->
+									<div class="tab-pane" id="tab11">
+										
+										<div class="fade-first" id="maunt_div">										
+												
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/unty.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Maternal Aunt</h2>
+												
+											</div>
+											<div class="sister_details new-sister-details">
+											    
+												<div class="sis_num">
+													<label>Number of Maternal Aunt</label>
+													<div class="cont-btn">
+														<input type="text" class="input17" id="no_of_maternal_aunts" name="no_of_maternal_aunts" value="" maxlength="1" onfocus="npsm(this,'no_of_maternal_aunts','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up17 button" onclick="scrollup(17,17)">▲</button>
+															<button type="button" class="down17 button" onclick="scrolldown(17,17)">▼</button>
+														</div>
+													</div>
+													<a class="btnNext agnbtnNext" id="maunt_next">Go to Details</a> 
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="mauntno_err" class="invisible new-visible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+										
+											<!-- Button Controls End -->
+											<!-- <a class="btnPrevious bttn" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Maternal Grandmother Details</a>
+											<a class="btnNext bttn" id="maunt_next" >Go to Details</a> 
+											<a class="btnNext bttn" onclick="goto_next_vtab()" >Maternal Half Sister Details <i class="fa fa-arrow-circle-right"></i></a> -->
+											<!-- Button Controls Start -->
+											
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Maternal Grandmother Details <span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn" onclick="goto_next_vtab()">Maternal Half Sister Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>
+										
+										</div>	
+
+										<div id="maunt_panel"></div>
+										
+									</div>
+									<!-- Maternal Aunt Details Section End -->
+									
+									<!-- Maternal Half Sister Details Section Start -->
+									<div class="tab-pane" id="tab12">
+									
+										<div class="fade-first" id="mhsis_div">
+												
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/half-sister.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Maternal Half Sister</h2>
+												
+											</div>
+											
+											<div class="sister_details new-sister-details">
+												<div class="sis_num">
+													<label>Number of Maternal Half Sister</label>
+													<div class="cont-btn">
+														<input type="text" class="input18" id="total_maternal_half_sister" name="total_maternal_half_sister" value="" maxlength="1" onfocus="npsm(this,'total_maternal_half_sister','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up18 button" onclick="scrollup(18,18)">▲</button>
+															<button type="button" class="down18 button" onclick="scrolldown(18,18)">▼</button>
+														</div>
+													</div>
+													
+													<a class="btnNext agnbtnNext" id="mhsis_next">Go to Details</a> 
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="mhsisno_err" class="invisible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+											
+											<!-- Button Controls Start -->
+											<!--<a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Maternal Aunt Details</a>
+											<a class="btnNext" id="mhsis_next" >Go to Details</a> 
+											<a class="btnNext" onclick="goto_next_vtab()" >Maternal Uncle's Daughter Details <i class="fa fa-arrow-circle-right"></i></a>-->
+											<!-- Button Controls End -->
+											
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Maternal Aunt Details<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn" onclick="goto_next_vtab()">Maternal Uncle's Daughter Details <span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>
+											
+													
+										</div>											
+										
+										<div id="mhsis_panel"></div>
+										
+									</div>
+									<!-- Maternal Half Sister Details Section End -->
+									
+									<!-- Maternal Uncle's Daughter Details Section Start -->
+									<div class="tab-pane" id="tab13">
+										
+										<div class="fade-first" id="mudaughter_div">
+										
+											<div class="sister_heading mnhd">
+												<div class="hding">
+													<figure>
+														<img src="images/daughter.png" alt="">
+													</figure>
+												</div>
+												<h2><span>cancer history</span>Maternal Uncle's Daughter</h2>
+												
+											</div>
+											
+											<div class="sister_details new-sister-details">
+												<div class="sis_num">
+													<label>Number of Maternal Uncle's Daughter</label>
+													<div class="cont-btn">
+														<input type="text" class="input19" id="no_of_muncle_daughter" name="no_of_muncle_daughter" value="" maxlength="1" onfocus="npsm(this,'no_of_muncle_daughter','cont-btn')">
+														<div class="spinner">
+															<button type="button" class="up19 button" onclick="scrollup(19,19)">▲</button>
+															<button type="button" class="down19 button" onclick="scrolldown(19,19)">▼</button>
+														</div>
+													</div>
+													
+													<a class="btnNext agnbtnNext" id="mudaughter_next">Go to Details</a>
+												</div>
+												
+												<!-- Error Messge Section -->
+												<div id="mudauno_err" class="invisible">
+													<p class="text-error"></p>
+												</div>
+												
+											</div>
+											
+											<!-- Button Controls Start -->
+											<!-- <a class="btnPrevious" onclick="goto_previous_vtab()" ><i class="fa fa-arrow-circle-left"></i> Maternal Half Sister Details</a>
+											<a class="btnNext" id="mudaughter_next" >Go to Details</a> -->
+											<!-- Button Controls End -->
+											
+											<div class="button-group">
+												<a class="btnPrevious bttn" onclick="goto_previous_vtab()"> Maternal Half Sister<span class="fst-btn-arrw"><img src="images/left-arrow.png"></span></a>
+												<a class="btnNext bttn invisible" onclick="goto_next_vtab()"><span class="scnd-btn-arrw"><img src="images/right-arrow.png"></span></a>
+											</div>
+												
+										</div> 
+										
+										<div id="mudaughter_panel"></div>
+										
+									</div>
+									<!-- Maternal Uncle's Daughter Details Section End -->
+									
+									<div class="submit_area">
+										<a href="javascript:void(0)" class="next_btn_res prev_btn_2" id="familyhistory_prev">BACK</a><!-- Back to QUESTIONNAIRE Tab  -->
+										<input class="calculate-risk-btn" id="submit_cyr_form" type="button" name="submit_cyr_form" value="Calculate Risk"> <!-- Submit the Risk Form -->							
+										<a href="javascript:void(0)" class="next_btn_res next_btn_4" id="result_invisible" style="">NEXT</a>	<!-- Don't Remove or Edit this Button(This is for Invisible Next button to go to RESULTS Tab) -->
+									</div>
+									
+								</div>
+							</div>    
+							
+							
+						</div>
+					</div>
+					<!-- FAMILY HISTORY (New Design) Section End -->
+					
+					<!-- YOUR RESULTS Section Start -->				
+					<h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-3"><span class="resp-arrow"></span>YOUR RESULTS</h2><div id="reults_div_sec" class="resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-3" style="display:block"><!-- YOUR RESULTS New Section Start -->
+						<div class="top_tab_content">
+							<h3>Your Results</h3>
+							<!-- <p>This risk calculator can determine the possibility of developing breast cancer within 10 years of your current age and lifetime. The purpose of this tool is to help you become informed and assist in how you should proceed for genetic counseling and testing. </p> -->
+							<p>The results below are based on the IBIS risk assessment model. These results display your 10-year risk and your lifetime risk compared to the U.S. population average. Please consult with your physician should you have any questions about your risk for breast cancer or for guidance on options for breast cancer screening or genetic counseling.</p>
+								
+								<div class="panel panel-primary">
+									<div class="panel-heading newpanel-heading"><h2>IBIS Breast Cancer Risk Assessment Score</h2></div>
+									<div class="panel-heading newpanel-heading-two"><h4>Patient Id : <span id="res_patient_id">Patient1620374487</span></h4></div>
+									<div class="panel-body text-center risk-content new-risk-content">
+										
+										<div class="perall">
+											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+												<h2>Personal <span>10-Year Risk</span></h2>
+												<canvas id="personal10yr_chart" width="118" height="118" style="display: block; width: 118px; height: 118px;"></canvas>
+												<h4 id="res_personal_10y_risk">-1.00 % </h4>												
+											</div>
+											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+												<h2>Population  <span>10-Year Risk</span></h2>
+												<canvas id="population10yr_chart" width="117" height="117" style="display: block; width: 117px; height: 117px;"></canvas>
+												<h4 id="res_population_10y_risk">-1.00 % </h4>
+											</div>
+											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+												<h2>Personal <span>Lifetime Risk</span></h2>
+												<canvas id="personallt_chart" width="118" height="118" style="display: block; width: 118px; height: 118px;"></canvas>
+												<h4 id="res_personal_lt_risk">-1.00 % </h4>
+											</div>
+											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+												<h2>Population <span>Lifetime Risk</span></h2>
+												<canvas id="populationlr_chart" width="117" height="117" style="display: block; width: 117px; height: 117px;"></canvas>
+												<h4 id="res_population_lt_risk">-1.00 % </h4>
+											</div>
+										</div>
+										<div class="textbox">
+											<p>Based on the information provided, the patient’s estimated risk for developing invasive breast cancer over the next 10 years is <span id="text_personal_10y_risk">-1.0%</span>. The U.S. population’s average 10-year risk is <span id="text_population_10y_risk">-1%</span> for women of the same age and race/ethnicity. Based on the information provided, the patient’s estimated risk for developing invasive breast cancer in her lifetime <span id="text_personal_lt_risk">-1.0%</span>. The U.S. population’s average lifetime risk is <span id="text_population_lt_risk">-1%</span> for women of the same age and race/ethnicity.</p>
+										</div>
+										
+										<div class="text-center mtpagn" id="action_btns">
+											<!--<a href="javascript:void(0)" class="download" onclick="window.print();" >Download Results</a>-->
+											<a href="javascript:void(0)" class="download" id="down_result_link" onclick="saveResultPDF('Patient1620374487')">Generate PDF</a>
+											<a href="javascript:void(0)" class="download next_btn_5">FAQ</a>											
+										</div>
+									</div>
+								</div>
+								
+								<a href="javascript:void(0)" class="next_btn_res prev_btn_3" id="result_prev" style="width:170px; margin-right:5px">BACK</a><!-- Back to Family History Tab --> 
+								<a id="clear_risk_factor" href="https://ibis-risk-calculator.magview.com/" class="clr-risk-factor-btn" style="width:170px;">START OVER</a><!-- Clear Risk Factors: Reset the form -->
+								<!--<a id="clear_risk_factor" href="#" class="clr-risk-factor-btn" style="width:170px;">START OVER</a>--><!-- Clear Risk Factors: Reset the form -->
+								<!--<a id="go_home" href="#" class="next_btn_res">Clear Risk Factors</a>-->
+						</div>
+						
+					</div><!-- YOUR RESULTS New Section End -->					
+
+					<h2 class="resp-accordion" role="tab" aria-controls="tab_item-4"><span class="resp-arrow"></span>FAQ</h2><div class="resp-tab-content" aria-labelledby="tab_item-4"><!-- FAQ Section Start -->
+						<div class="top_tab_content">
+							<h3>Frequently Asked Questions</h3>
+							<p>The risk calculator can determine the possibility of developing breast cancer within 10 years of your current age and lifetime. The purpose of this tool is to help you become informed and assist in how you should proceed for genetic counseling and testing.</p>
+							
+
+							 <div id="faq_accordion" class="accordianarea ui-accordion ui-widget ui-helper-reset" role="tablist">
+							  <h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-header-active ui-state-active ui-accordion-icons" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span><span class="point">Q1.</span> What is the Tyrer-Cuzick model and how is it used for breast cancer risk assessment?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false" style="display: block;">
+							    <p>The Tyrer Cuizck model, sometimes referred to as IBIS tool, provides a risk score that estimates the likelihood of a woman developing breast cancer in 10 years and over the course of her lifetime. The risk score is calculated using a variety of risk factors that include personal health history, as well as family history of cancers. The score is typically expressed as a percentage.</p>
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q2.</span> What are the risk factors used to calculate the Tyrer Cuzick score?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
+							    <p>The major risk factors are:  </p>
+							    <ul class="one-column">
+							    	<li>Age</li>
+									<li>Height</li>
+									<li>Weight</li>
+									<li>Age at menarche</li>
+									<li>Age at first delivery</li>
+									<li>Age at menopause</li>
+									<li>Breast density</li>
+									<li>Ashkenazi Jewish heritage</li>
+									<li>History of hormone use</li>
+									<li>Genetic testing results for BRCA 1 and BRCA 2</li>
+									<li>Number of daughters</li>
+									<li>Number of sisters &amp; half sisters</li>
+									<li>Number of maternal aunts</li>
+									<li>Number of paternal aunts</li>
+									<li>Atypical breast biopsies, ie: ADH, ALH, LCIS</li>
+									<li>History of breast biopsy/surgery</li>
+									<li>Personal or family history of Breast cancer</li>
+									<li>Age cancer was diagnosed</li>
+									<li>Cancer in one breast or both breasts</li>							
+								</ul>
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q3.</span> What does it mean to have dense breast tissue, and why does it matter for my Tyrer Cuzick risk score?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true" style="display: none;">
+							    <p>Breast cancer research and advances in risk assessment have shown that having dense breasts is a contributing factor in determining a woman’s risk of breast cancer. Dense breast tissue refers to the appearance of breast tissue on a mammogram and the makeup of supportive and fatty tissue in the breast. The more fatty tissue, the less dense the breast is. Dense breast are common and can be caused by simply being younger, having a lower body mass index, or taking hormone therapy for menopause; researchers are still studying why some women have dense breast and other do not. Non-dense tissue appears dark and transparent, whereas dense breast tissue appears as solid white area on a mammogram; the solid white area can make it hard for radiologists to accurately analyze the image with a mammogram, so your provider may recommend supplemental imaging, like a breast ultrasound or other recommendations, to ensure no cancers are missed. Having dense breast alone is not cause for concern, and you should speak with your doctor about your breast density and how it affects your risk status.</p>
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q4.</span> Why is it important for me to know my risk score?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true" style="display: none;">
+							    <p>Risk assessment can help breast centers tailor screening and follow up recommendations to ensure you are receiving the care you need. Risk assessment identifies women who are candidates for additional imaging, genetic counseling, genetic testing, and/or other specialized recommendations.</p>
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-9" aria-controls="ui-id-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q5.</span> What is considered a high risk score for Tyrer Cuzick?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-10" aria-labelledby="ui-id-9" role="tabpanel" aria-hidden="true" style="display: none;"> 
+									<p>Some facilities may have different guidelines, so you should check with your imaging provider, but generally:</p>
+									<ul class="one-column">
+										<li>Less than 15% is considered average risk</li>
+										<li>Between 15-19% is considered intermediate risk</li>
+										<li>Greater than 20% is considered high risk</li>
+									</ul>	
+							 </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-11" aria-controls="ui-id-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q6.</span> Are there other risk models like Tyrer Cuzick?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-12" aria-labelledby="ui-id-11" role="tabpanel" aria-hidden="true" style="display: none;">
+							  	<p>Yes, there are other risk models such as Gail/NCI, BRCAPRO, Claus, BCSC and more; however, Tyrer Cuzick has been widely accepted as the most comprehensive risk model due to the more detailed data collection. Your facility may use one or more of the models together.</p>  
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-13" aria-controls="ui-id-14" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q7.</span> How can I have my risk score calculated?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-14" aria-labelledby="ui-id-13" role="tabpanel" aria-hidden="true" style="display: none;">
+							  	<p>While risk calculators and other tools exist online, it is best to speak with you doctor about having your risk score calculated. Learning you are high risk from an online calculator without guidance from your doctor may only cause unnecessary anxiety.</p>  
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-15" aria-controls="ui-id-16" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q8.</span> I am in the high risk category – does this mean I will definitely develop breast cancer?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-16" aria-labelledby="ui-id-15" role="tabpanel" aria-hidden="true" style="display: none;">
+							  	<p>No, being high risk just means that when statistically compared to other women, your chances are higher, sometimes only slightly higher. It is completely understandable to be concerned about your high risk status, but early detection is our best tool against breast cancer. By identifying your risk, your doctors can provide you with a personalized screening plan and/or risk reduction options.</p>  
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-17" aria-controls="ui-id-18" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q9.</span> I am in the high risk category – Is there anything I can do to reduce my risk of being diagnosed with breast cancer?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-18" aria-labelledby="ui-id-17" role="tabpanel" aria-hidden="true" style="display: none;">
+							  	<p>You should speak with your doctor about your specific circumstances to determine if there is anything you can do to lower your risk. In some cases, your doctor may recommend lifestyle changes, and in higher risk cases, there are risk lowering drugs and interventional surgery options. It is important, however, that your doctor make the appropriate recommendations.</p>  
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-19" aria-controls="ui-id-20" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q10.</span> I have already been diagnosed with breast cancer. Does risk assessment apply to me?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-20" aria-labelledby="ui-id-19" role="tabpanel" aria-hidden="true" style="display: none;">
+							  	<p>No, risk assessment does not apply to those over the age of 85 and those already diagnosed with breast cancer.</p>  
+							  </div>
+							  <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-21" aria-controls="ui-id-22" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="point">Q11.</span> Are there any additional resources online to learn more about breast cancer risk assessment?</h3>
+							  <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-22" aria-labelledby="ui-id-21" role="tabpanel" aria-hidden="true" style="display: none;">
+									<p>While your doctor and imaging providers are the best resources, here are a few sites that can provide you with more information until you speak to your doctors:</p> 
+									<ul class="one-column">
+										<li><a target="_blank" href="https://www.breastcancer.org/risk/factors">https://www.breastcancer.org/risk/factors</a></li>
+										<li><a target="_blank" href="https://emedicine.medscape.com/article/1945957-overview#a10">https://emedicine.medscape.com/article/1945957-overview#a10</a></li>
+									</ul>	
+							  </div>
+							</div>						
+								
+							<!--<a href="javascript:void(0)" class="next_btn_res" >BACK</a>--><!-- Back to Your Result Tab --> 							
+							<a href="javascript:void(0)" class="next_btn_res prev_btn_4" id="faq_prev" style="width:170px; margin-right:5px">BACK</a>
+							
+						</div>
+					</div><!-- FAQ Section End -->
+					
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<!-- Validation Message Modal Start -->
+	<div id="error_msg_modal" class="modal fade" role="dialog">
+		<div id="modal_inf" class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<span class="modal-title">Error Message</span>
+				</div>
+				
+				<div class="modal-body" id="msg_area"></div>
+				
+				<div class="modal-footer text-center">
+					<a class="modal-btn" data-dismiss="modal">OK</a>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>	
+	<!-- Validation Message Modal End -->
+	
+	<!-- Information Message Modal Start -->
+	<div class="modal fade result-modal" id="risk_info_modal" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<span class="modal-title">Information</span>
+				</div>
+				<div class="modal-body text-center">
+					<p id="info_msg"></p>
+				</div>
+				<div class="modal-footer text-center">
+					<a class="modal-btn" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Information Message Modal End -->	
+	
+	<footer>
+		<div class="container">
+			<div class="follow_us">
+				<div class="curve1"><img src="https://www.magview.com/wp-content/themes/magview/images/curve1.png" alt=""></div>
+				<div class="curve2"><img src="https://www.magview.com/wp-content/themes/magview/images/curve2.png" alt=""></div>
+				<span>Follow us on</span>
+				 <a href="https://www.facebook.com/magviewinc" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				 <a href="https://twitter.com/magviewinc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				 <a href="https://www.linkedin.com/company/magview" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				 <a href="https://www.youtube.com/channel/UCpuMpNokhqQbRBvDPXpyyyw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+			</div>
+		  <h2></h2>
+		  <div class="row">
+			 <div class="col-md-4 col-sm-6 default">
+				<p><img src="https://www.magview.com/wp-content/themes/magview/images/flogo.jpg" alt=""></p>
+				<p>8110 Maple Lawn Boulevard <br>
+				   Suite 400<br>Fulton, MD 20759
+				</p>
+			 </div>
+			 <div class="col-md-4 col-sm-6 default">
+				<h3>information</h3>
+				<div class="row">
+				   <div class="col-md-6 left_border">
+					  <div class="menu-footer1-container">
+						 <ul id="menu-footer1" class="menu">
+							<li id="menu-item-6539" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6539"><a href="https://www.magview.com/privacy-policy/">Privacy Policy</a></li>
+							<li id="menu-item-6459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6459"><a href="https://www.magview.com/careers/">Careers</a></li>
+							<li id="menu-item-1776" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1776"><a href="https://magview.freshdesk.com/support/login">Support Login</a></li>
+						 </ul>
+					  </div>
+				   </div>
+				   <div class="col-md-6">
+					  <div class="menu-footer2-container">
+						 <ul id="menu-footer2" class="menu">
+							<li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="https://www.magview.com/about-us/">About MagView</a></li>
+							<li id="menu-item-1773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1773"><a href="https://www.magview.com/cost-limitations/">Cost &amp; Limitations</a></li>
+							<li id="menu-item-799" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-799"><a href="https://www.magview.com/news-events/">Media</a></li>
+							<li id="menu-item-5902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5902"><a href="https://www.magview.com/contact/">Contact</a></li>
+						 </ul>
+					  </div>
+				   </div>
+				  
+				</div>
+			 </div>
+			 <div class="col-md-4 col-sm-12">
+				<h3>contact us</h3>
+				<div class="row">
+				   <div class="col-md-12 left_border">
+					  <p><a href="tel:8005538996">(800) 553-8996</a></p>
+				   </div>
+				</div>
+			 </div>
+		  </div>
+	   </div>
+	   <div class="footer_btm">
+		  <p>© MagView 2020 All rights reserved</p>
+	   </div>
+	</footer>
+	
+	<!-- JS File(s) -->		 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+	<script src="js/easy-responsive-tabs.js"></script>	
+	<script src="js/custom.js"></script>	
+	<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>	
+	
+    
+</body></html>

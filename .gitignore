@@ -1,0 +1,4 @@
+app/env/
+doc/
+app/build/
+app/__pycache__

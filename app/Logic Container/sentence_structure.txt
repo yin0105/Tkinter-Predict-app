@@ -1,0 +1,1 @@
+{"address_logic": 1, "report_logic": 2, "data_logic": 3, "clubbing_logic": 4}
