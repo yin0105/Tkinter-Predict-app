@@ -10,7 +10,8 @@ from pathlib import Path
 from storykey import storykey
 from tire import GeneticRisk
 from multiprocessing import Process
-from PIL import ImageTk,Image
+from PIL import ImageTk
+import PIL
 from numpy.lib.function_base import append
 from numpy.lib.polynomial import polyfit
 from pandas.core import frame
@@ -19,6 +20,7 @@ from tkmagicgrid import *
 from tkinter import ttk
 from os import curdir
 from tkinter import *
+from datetime import datetime
 
 
 def display_in_center(win, w, h):
@@ -84,7 +86,7 @@ def register():
     global register_screen
     register_screen = Toplevel(main_screen)
 
-    ico_path = curdir+"\media\my_icon.ico"
+    ico_path = curdir+"\\media\\my_icon.ico"
     register_screen.iconbitmap(ico_path)
     register_screen.title("Register")
     display_in_center(user_not_found_screen, 300, 250)
@@ -132,7 +134,7 @@ def login():
     login_screen.title("Login")
     display_in_center(login_screen, 300, 250)
 
-    ico_path = curdir+"\media\my_icon.ico"
+    ico_path = curdir+"\\media\\my_icon.ico"
     login_screen.iconbitmap(ico_path)
     Label(login_screen, text="Please enter details below to login").pack()
     Label(login_screen, text="").pack()
@@ -217,7 +219,7 @@ class application_window:
         self.root = Tk()
         frame = self.root
       
-        ico_path = curdir+"\media\my_icon.ico"
+        ico_path = curdir+"\\media\\my_icon.ico"
         frame.iconbitmap(ico_path)
         frame.title("Predictive AI Application Window")
         display_in_center(frame, 1000, 800)
@@ -1266,11 +1268,17 @@ class application_window:
 
 
         def execute_single_files():
+            global total_files, rows_of_file, cur_file_num, cur_row_num
+            start_time = datetime.now()
+
             print("____________*** Prediction Al ***_____________________")
             print("Please make sure master sheet and test sheet are uploaded")
             print(" ")
 
+            total_files = len(self.test_sheet_filepaths)
+            cur_file_num = 0
             for test_sheet_filepath in self.test_sheet_filepaths:
+                cur_file_num += 1
                 self.test_sheet_filepath = test_sheet_filepath
 
                 file1 = open("AI External-Outputs/path_info.txt", "w")
@@ -1314,7 +1322,10 @@ class application_window:
                 df = pd.DataFrame(columns =cols_names)
                 df.to_csv("AI External-Outputs/Prediction_output_{}.csv".format(t_filename),index=False)
 
+                rows_of_file = len(col_name)
+                cur_row_num = 0
                 for idx,col in enumerate(col_name):
+                    cur_row_num += 1
                     # if idx > 1 : break
                     print("idx = ", idx, " , col = ", col)
                     age,prediction,score_relat,score_std,ethnicity,prediction_metric,consumption_metric,mat_master_dict,lent,to_check_dict = execute(test_df,col,mat_master_dict,to_check_dict)
@@ -1528,7 +1539,7 @@ class application_window:
             # root.geometry("1024x1024")
             display_in_center(root, 1000, 800)
 
-            ico_path = curdir+"\media\my_icon.ico"
+            ico_path = curdir+"\\media\\my_icon.ico"
             root.iconbitmap(ico_path)
             grid = MagicGrid(root)
             grid.pack(side="top", expand=2, fill="both")
@@ -1558,7 +1569,7 @@ class application_window:
         root = Tk() 
 
 
-        ico_path = curdir+"\media\my_icon.ico"
+        ico_path = curdir+"\\media\\my_icon.ico"
         root.iconbitmap(ico_path)
 
         # specify size of window. 
@@ -1619,10 +1630,10 @@ class application_window:
         self.root.after(100, self.check_submit_thread)
 
     def check_submit_thread(self):
+        global total_files, rows_of_file, cur_file_num, cur_row_num
         if submit_thread.is_alive():
-            
-            self.progressbar["value"] = int(self.progressbar["value"] + 10)
-            Label(self.root,text=(str(self.progressbar["value"])+"/"+"100")).grid(row=1, column=0, columnspan=2, ipadx=50)
+            self.progressbar["value"] = int(((cur_file_num - 1) / total_files + (cur_row_num - 1) / rows_of_file / total_files) * 100)
+            Label(self.root,text=(str(self.progressbar["value"])+"%")).grid(row=1, column=0, columnspan=2, ipadx=50)
 
             self.progressbar.update()
             self.root.after(100, self.check_submit_thread)
@@ -1643,7 +1654,7 @@ def password_not_recognised():
     global password_not_recog_screen
     password_not_recog_screen = Toplevel(login_screen)
 
-    ico_path = curdir+"\media\my_icon.ico"
+    ico_path = curdir+"\\media\\my_icon.ico"
     password_not_recog_screen.iconbitmap(ico_path)
     
     password_not_recog_screen.title("Success")
@@ -1658,7 +1669,7 @@ def user_not_found():
     global user_not_found_screen
     user_not_found_screen = Toplevel(login_screen)
 
-    ico_path = curdir+"\media\my_icon.ico"
+    ico_path = curdir+"\\media\\my_icon.ico"
     login_screen.iconbitmap(ico_path)
     
     
@@ -1689,7 +1700,7 @@ def welcome_screen():
     global welcome_screen
     welcome_screen = Tk()
 
-    image = Image.open("logo.jpg")
+    image = PIL.Image.open("logo.jpg")
     width, height = image.size
     new_width = 600
     new_hight = int(height / width * new_width)
@@ -1712,7 +1723,7 @@ def main_account_screen():
     global main_screen
     main_screen = Tk()
 
-    ico_path = curdir+"\media\my_icon.ico"
+    ico_path = curdir+"\\media\\my_icon.ico"
     main_screen.iconbitmap(ico_path)
     main_screen.title("Account Login")
     Label(text="PREDECTIVE AI", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
@@ -1724,5 +1735,9 @@ def main_account_screen():
     display_in_center(main_screen, 300, 250)
     main_screen.mainloop()
 
+total_files = 1
+rows_of_file = 1
+cur_file_num = 1
+cur_row_num = 1
 main_account_screen()
 
