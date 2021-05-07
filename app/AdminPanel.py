@@ -1650,8 +1650,9 @@ class application_window:
                     remain_time += "{} min ".format(r_min)
                 if r_sec > 0:
                     remain_time += "{} sec ".format(r_sec)
+                remain_time += "remained."
             self.progressbar["value"] = int(((cur_file_num - 1) / total_files + (cur_row_num - 1) / rows_of_file / total_files) * 100)
-            Label(self.root,text=("{} % :   {} remained.".format(self.progressbar["value"], remain_time))).grid(row=1, column=0, columnspan=2, ipadx=50)
+            Label(self.root,text=("{} % :   {}".format(self.progressbar["value"], remain_time))).grid(row=1, column=0, columnspan=2, ipadx=50)
 
             self.progressbar.update()
             self.root.after(50, self.check_submit_thread)

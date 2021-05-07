@@ -28,7 +28,7 @@
 						else { window.addEventListener('load', async_load, false); }
 		})();
 	</script>
-<script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=&amp;visitor_id_sign=&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick%20Risk%20Calculator%20for%20Breast%20Cancer%20Risk%20Assessment&amp;url=https%3A%2F%2Fibis-risk-calculator.magview.com%2F&amp;referrer="></script><script type="text/javascript" src="https://info.magview.com/analytics?conly=true&amp;visitor_id=95043363&amp;visitor_id_sign=a7f5dab4d49195ed4d16b9cac5af03c92be42cc1e0bb07cb8dd241ae65bab4c87c63bf132bd2bfc30389a994b67d0db2f7b8fe99&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment&amp;url=https://ibis-risk-calculator.magview.com/&amp;referrer="></script></head>
+<script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=&amp;visitor_id_sign=&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick%20Risk%20Calculator%20for%20Breast%20Cancer%20Risk%20Assessment&amp;url=https%3A%2F%2Fibis-risk-calculator.magview.com%2F&amp;referrer="></script><script type="text/javascript" src="https://info.magview.com/analytics?conly=true&amp;visitor_id=95043909&amp;visitor_id_sign=4a85e8e875c31b3936cea3d1d55191b4df5b645ffb8c07a2b5a8d39fafee0c88b8cb368b12382268ee9dfaec618e3f4a3e6c8cc1&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment&amp;url=https://ibis-risk-calculator.magview.com/&amp;referrer="></script></head>
 <body>
 	<div id="myDIV"></div>
 	<!-- Header Start -->
@@ -2012,7 +2012,7 @@
 								
 								<div class="panel panel-primary">
 									<div class="panel-heading newpanel-heading"><h2>IBIS Breast Cancer Risk Assessment Score</h2></div>
-									<div class="panel-heading newpanel-heading-two"><h4>Patient Id : <span id="res_patient_id">Patient1620404786</span></h4></div>
+									<div class="panel-heading newpanel-heading-two"><h4>Patient Id : <span id="res_patient_id">Patient1620404963</span></h4></div>
 									<div class="panel-body text-center risk-content new-risk-content">
 										
 										<div class="perall">
@@ -2043,7 +2043,7 @@
 										
 										<div class="text-center mtpagn" id="action_btns">
 											<!--<a href="javascript:void(0)" class="download" onclick="window.print();" >Download Results</a>-->
-											<a href="javascript:void(0)" class="download" id="down_result_link" onclick="saveResultPDF('Patient1620404786')">Generate PDF</a>
+											<a href="javascript:void(0)" class="download" id="down_result_link" onclick="saveResultPDF('Patient1620404963')">Generate PDF</a>
 											<a href="javascript:void(0)" class="download next_btn_5">FAQ</a>											
 										</div>
 									</div>
