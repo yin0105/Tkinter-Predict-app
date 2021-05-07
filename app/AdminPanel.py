@@ -226,7 +226,7 @@ class application_window:
         self.current_dir = curdir
         b1 = tkinter.Button(frame, text='Select Master Sheet',width=15, height=2, command=self.get_path_master).place(x=30, y=50)
         b2 = tkinter.Button(frame, text='Select Multiple Test Sheets (use ctrl + click to select)',width=40, height=2, command=self.get_path_test).place(x=300,y=50)
-        self.progressbar = ttk.Progressbar(frame, mode='determinate',cursor='spider',length=300)
+        self.progressbar = ttk.Progressbar(frame, mode='determinate',cursor='spider',length=500)
         self.progressbar.grid(column=1, row=0, sticky=W)
         self.progressbar["maximum"] = 100 
         
@@ -1627,7 +1627,7 @@ class application_window:
         global submit_thread
         submit_thread = threading.Thread(target=self.get_prediction)
         submit_thread.daemon = True
-        self.progressbar.start()
+        # self.progressbar.start()
         submit_thread.start()
         
         self.root.after(100, self.check_submit_thread)
