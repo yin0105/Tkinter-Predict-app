@@ -207,7 +207,7 @@ class GeneticRisk():
 
         options = Options()
         # options.binary_location = r"C:\Users\amisr\Downloads\03-01-2021\Genetic_automation\chromium-87-0-4246\chrome-win\chrome.exe"
-        options.binary_location = r"D:\Win_x64_843846_chrome-win\chrome-win\chrome.exe"
+        options.binary_location = r"C:\Win_x64_843846_chrome-win\chrome-win\chrome.exe"
         options.add_argument("--disable-infobars")
         options.add_argument("start-maximized")
         options.add_argument("--disable-extensions")
