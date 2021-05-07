@@ -21,6 +21,7 @@ from tkinter import ttk
 from os import curdir
 from tkinter import *
 from datetime import datetime
+from os.path import dirname, realpath, join
 
 
 def display_in_center(win, w, h):
@@ -1573,11 +1574,13 @@ class application_window:
 
 
         # ico_path = curdir+"\\media\\my_icon.ico"
-        # root.iconbitmap(ico_path)
+        ico_path = join( dirname(realpath(__file__)), "media","my_icon.ico")
+        root.iconbitmap(ico_path)
+
 
         # specify size of window. 
         # root.geometry("1024x1024") 
-        display_in_center(root, 1000, 300)
+        display_in_center(root, 1000, 800)
 
         # Create text widget and specify size. 
         T = Text(root, height = 5, width = 52) 
