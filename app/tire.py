@@ -14,6 +14,7 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import json
 from pathlib import Path
+import http.client
 
 class GeneticRisk():
 
@@ -1708,7 +1709,11 @@ class GeneticRisk():
         dfn = df.iloc[self.case_iter,10] = risk10
         df_n2 = df.iloc[self.case_iter,11] = risklt
         df.to_csv("AI External-Outputs/Prediction_output_{}.csv".format(t_filename),index=False)
-        self.driver.close()
+        # self.driver.close()
+        conn = http.client.HTTPConnection(self.driver.service.service_url.split("//")[1])
+        conn.request("GET", "/shutdown")
+        conn.close()
+        del self.driver
 
         """
         
