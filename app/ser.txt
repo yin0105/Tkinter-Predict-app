@@ -28,7 +28,7 @@
 						else { window.addEventListener('load', async_load, false); }
 		})();
 	</script>
-<script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=&amp;visitor_id_sign=&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick%20Risk%20Calculator%20for%20Breast%20Cancer%20Risk%20Assessment&amp;url=https%3A%2F%2Fibis-risk-calculator.magview.com%2F&amp;referrer="></script><script type="text/javascript" src="https://info.magview.com/analytics?conly=true&amp;visitor_id=95040445&amp;visitor_id_sign=b86c4edb64282bc78ef1514f94f80a98d11065bff766d1323a1020e4008e3c55ccae84fc84a502139a092f488f736e8fb36f75da&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment&amp;url=https://ibis-risk-calculator.magview.com/&amp;referrer="></script></head>
+<script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=&amp;visitor_id_sign=&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick%20Risk%20Calculator%20for%20Breast%20Cancer%20Risk%20Assessment&amp;url=https%3A%2F%2Fibis-risk-calculator.magview.com%2F&amp;referrer="></script><script type="text/javascript" src="https://info.magview.com/analytics?conly=true&amp;visitor_id=95043363&amp;visitor_id_sign=a7f5dab4d49195ed4d16b9cac5af03c92be42cc1e0bb07cb8dd241ae65bab4c87c63bf132bd2bfc30389a994b67d0db2f7b8fe99&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment&amp;url=https://ibis-risk-calculator.magview.com/&amp;referrer="></script></head>
 <body>
 	<div id="myDIV"></div>
 	<!-- Header Start -->
@@ -667,15 +667,15 @@
 										
 										<!-- As Per Request (IBIS Application)  0=No test,1=Negative,2=BRCA1,3=BRCA2 -->
 										<div class="radio_res_holder new-radio-res-holder">
-											<label class="rad_ik_hld">No prior biopsy / No proliferative disease
+											<label class="rad_ik_hld" style="display: none;">No prior biopsy / No proliferative disease
 												<input type="radio" name="breast_biopsy" value="0" checked="checked">
 												<span class="checkmark"></span>
 											</label>
-											<label class="rad_ik_hld">Prior biopsy, result unknown
+											<label class="rad_ik_hld" style="display: none;">Prior biopsy, result unknown
 												<input type="radio" name="breast_biopsy" value="2">
 												<span class="checkmark"></span>
 											</label>
-											<label class="rad_ik_hld">Hyperplasia (not atypia)
+											<label class="rad_ik_hld" style="display: none;">Hyperplasia (not atypia)
 												<input type="radio" name="breast_biopsy" value="1">
 												<span class="checkmark"></span>
 											</label>
@@ -2012,7 +2012,7 @@
 								
 								<div class="panel panel-primary">
 									<div class="panel-heading newpanel-heading"><h2>IBIS Breast Cancer Risk Assessment Score</h2></div>
-									<div class="panel-heading newpanel-heading-two"><h4>Patient Id : <span id="res_patient_id">Patient1620403749</span></h4></div>
+									<div class="panel-heading newpanel-heading-two"><h4>Patient Id : <span id="res_patient_id">Patient1620404786</span></h4></div>
 									<div class="panel-body text-center risk-content new-risk-content">
 										
 										<div class="perall">
@@ -2043,7 +2043,7 @@
 										
 										<div class="text-center mtpagn" id="action_btns">
 											<!--<a href="javascript:void(0)" class="download" onclick="window.print();" >Download Results</a>-->
-											<a href="javascript:void(0)" class="download" id="down_result_link" onclick="saveResultPDF('Patient1620403749')">Generate PDF</a>
+											<a href="javascript:void(0)" class="download" id="down_result_link" onclick="saveResultPDF('Patient1620404786')">Generate PDF</a>
 											<a href="javascript:void(0)" class="download next_btn_5">FAQ</a>											
 										</div>
 									</div>
