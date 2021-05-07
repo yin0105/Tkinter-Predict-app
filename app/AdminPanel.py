@@ -1269,6 +1269,7 @@ class application_window:
 
         def execute_single_files():
             global total_files, rows_of_file, cur_file_num, cur_row_num, aver_time, total_completed_rows
+            
             start_time = datetime.now()
 
             print("____________*** Prediction Al ***_____________________")
@@ -1456,7 +1457,6 @@ class application_window:
 
 
                     sk.execute(self.test_sheet_filepath,col,idx)
-                    # aver_time, total_completed_rows
                     total_completed_rows += 1
                     aver_time = (datetime.now() - start_time).total_seconds() / total_completed_rows 
 
@@ -1633,10 +1633,23 @@ class application_window:
         self.root.after(100, self.check_submit_thread)
 
     def check_submit_thread(self):
-        global total_files, rows_of_file, cur_file_num, cur_row_num
+        global total_files, rows_of_file, cur_file_num, cur_row_num, aver_time, total_completed_rows
         if submit_thread.is_alive():
+            if total_completed_rows  == 0 :
+                remain_time = "It is calculating remaining time."
+            else:
+                remain_time = aver_time * (rows_of_file - cur_row_num + rows_of_file * (total_files - cur_file_num))
+                r_hour = remain_time // 3600
+                r_min = (remain_time % 3600) // 60
+                r_sec = int(remain_time % 60)
+                if r_hour > 0: 
+                    remain_time = "{} hour ".format(r_hour)
+                if r_min > 0:
+                    remain_time += "{} min ".format(r_min)
+                if r_sec > 0:
+                    remain_time += "{} sec ".format(r_sec)
             self.progressbar["value"] = int(((cur_file_num - 1) / total_files + (cur_row_num - 1) / rows_of_file / total_files) * 100)
-            Label(self.root,text=(str(self.progressbar["value"])+"%")).grid(row=1, column=0, columnspan=2, ipadx=50)
+            Label(self.root,text=(str(self.progressbar["value"])+"% :   " + remain_time)).grid(row=1, column=0, columnspan=2, ipadx=50)
 
             self.progressbar.update()
             self.root.after(100, self.check_submit_thread)
@@ -1742,5 +1755,6 @@ total_files = 1
 rows_of_file = 1
 cur_file_num = 1
 cur_row_num = 1
+total_completed_rows = 0
 main_account_screen()
 
