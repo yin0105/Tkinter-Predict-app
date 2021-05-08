@@ -1539,13 +1539,13 @@ class application_window:
             
 
         def display_prediction():
-            root = tkinter.Tk()
-            # root.geometry("1024x1024")
-            display_in_center(root, 1000, 800)
+            predict_display_win = tkinter.Tk()
+            # predict_display_win.geometry("1024x1024")
+            display_in_center(predict_display_win, 1000, 800)
 
             ico_path = curdir+"\\media\\my_icon.ico"
-            root.iconbitmap(ico_path)
-            grid = MagicGrid(root)
+            predict_display_win.iconbitmap(ico_path)
+            grid = MagicGrid(predict_display_win)
             grid.pack(side="top", expand=2, fill="both")
 
             # open file
@@ -1569,7 +1569,7 @@ class application_window:
                         grid.add_row(*row)
                     parsed_rows += 1
 
-                root.mainloop()
+                predict_display_win.mainloop()
         root = Tk() 
 
 
@@ -1614,6 +1614,8 @@ class application_window:
         b1.pack() 
         b2.pack() 
         b3.pack()
+
+        root.mainloop()
 
 
 
