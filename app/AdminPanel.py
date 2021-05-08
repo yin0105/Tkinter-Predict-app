@@ -1660,7 +1660,7 @@ class application_window:
             Label(self.root,text=("{} % :   {}".format(self.progressbar["value"], remain_time))).grid(row=1, column=0, columnspan=2, ipadx=50)
 
             self.progressbar.update()
-            self.root.after(50, self.check_submit_thread)
+            self.root.after(1000, self.check_submit_thread)
         else:
             print("*************nb yes")
             self.progressbar.stop()
