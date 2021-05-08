@@ -1,11 +1,11 @@
 {
-  "age_logic": "inactive",
-  "settlement_logic": "inactive",
-  "ethnicity_logic" : "inactive",
-  "qualifying_criteria" : "inactive",
-  "finetuning_logic" : "inactive",
-  "layer_logic" : "inactive",
-  "matmul_logic" : "inactive",
+  "age_logic": "active",
+  "settlement_logic": "active",
+  "ethnicity_logic" : "active",
+  "qualifying_criteria" : "active",
+  "finetuning_logic" : "active",
+  "layer_logic" : "active",
+  "matmul_logic" : "active",
   "headless" : "active",
-  "grammar_logic" : "inactive"
+  "grammar_logic" : "active"
  }
