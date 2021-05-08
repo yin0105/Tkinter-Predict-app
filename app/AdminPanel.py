@@ -1643,11 +1643,11 @@ class application_window:
             if total_completed_rows  == 0 :
                 remain_time = "It is calculating remaining time."
             else:
-                remain_time = aver_time * (rows_of_file - cur_row_num + rows_of_file * (total_files - cur_file_num)) - ((datetime.now() - start_time).total_seconds() - total_completed_rows * aver_time)
-                if remain_time < 0: remain_time = 0
-                r_hour = int(remain_time // 3600)
-                r_min = int((remain_time % 3600) // 60)
-                r_sec = int(remain_time % 60)
+                r_time = aver_time * (rows_of_file - cur_row_num + 1 + rows_of_file * (total_files - cur_file_num)) - ((datetime.now() - start_time).total_seconds() - total_completed_rows * aver_time)
+                
+                r_hour = int(r_time // 3600)
+                r_min = int((r_time % 3600) // 60)
+                r_sec = int(r_time % 60)
                 remain_time = ""
                 if r_hour > 0: 
                     remain_time = "{} hour ".format(r_hour)
@@ -1655,7 +1655,10 @@ class application_window:
                     remain_time += "{} min ".format(r_min)
                 if r_sec > 0:
                     remain_time += "{} sec ".format(r_sec)
-                remain_time += "remained."
+                if r_time <= 0: 
+                    remain_time = 0
+                else:
+                    remain_time += "remained."
             self.progressbar["value"] = int(((cur_file_num - 1) / total_files + (cur_row_num - 1) / rows_of_file / total_files) * 100)
             Label(self.root,text=("{} % :   {}".format(self.progressbar["value"], remain_time))).grid(row=1, column=0, columnspan=2, ipadx=50)
 

@@ -79,6 +79,7 @@ class storykey():
         t_filename = Path(test_filepath).stem
         df = pd.read_csv("AI External-Outputs/Prediction_output_{}.csv".format(t_filename))
         df_n = df.iloc[self.case_iter,7] = sent
+        print("sen :::::::: ", sent)
         #df.iloc[1+self.case_iter,13] = risklt
         df.to_csv("AI External-Outputs/Prediction_output_{}.csv".format(t_filename),index=False)
 

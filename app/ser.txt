@@ -28,7 +28,7 @@
 						else { window.addEventListener('load', async_load, false); }
 		})();
 	</script>
-<script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=&amp;visitor_id_sign=&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick%20Risk%20Calculator%20for%20Breast%20Cancer%20Risk%20Assessment&amp;url=https%3A%2F%2Fibis-risk-calculator.magview.com%2F&amp;referrer="></script><script type="text/javascript" src="https://info.magview.com/analytics?conly=true&amp;visitor_id=95063565&amp;visitor_id_sign=77fdbab8310701ea4caa73fa42accadbd9a43ad47c711100bb363ded3f53824b51ee5912c83036cbb46578542f3fa3b9138c97db&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment&amp;url=https://ibis-risk-calculator.magview.com/&amp;referrer="></script></head>
+<script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=&amp;visitor_id_sign=&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick%20Risk%20Calculator%20for%20Breast%20Cancer%20Risk%20Assessment&amp;url=https%3A%2F%2Fibis-risk-calculator.magview.com%2F&amp;referrer="></script><script type="text/javascript" src="https://info.magview.com/analytics?conly=true&amp;visitor_id=95134031&amp;visitor_id_sign=815a3b9d90aac9a47049aaf470166a5c1ca8b4881fe9a27e5cda6404ba2d9ed18a5030f14a699faf4178aa62b9556528865f902f&amp;pi_opt_in=&amp;campaign_id=54036&amp;account_id=860853&amp;title=Tyrer-Cuzick Risk Calculator for Breast Cancer Risk Assessment&amp;url=https://ibis-risk-calculator.magview.com/&amp;referrer="></script></head>
 <body>
 	<div id="myDIV"></div>
 	<!-- Header Start -->
@@ -375,7 +375,7 @@
 														<button type="button" class="up5 button" onclick="scrollup(5,5)">▲</button>
 														<button type="button" class="down5 button" onclick="scrolldown(5,5)">▼</button>
 													</div>
-												</div>												
+												<fieldset class="numpad" style="display: none;"><input class="key" type="button" value="1"><input class="key" type="button" value="2"><input class="key" type="button" value="3"><input class="key" type="button" value="4"><input class="key" type="button" value="5"><input class="key" type="button" value="6"><input class="key" type="button" value="7"><input class="key" type="button" value="8"><input class="key" type="button" value="9"><input class="key notnth" type="button" value="0"><a class="key num_back"><i class="fa fa-arrow-left"></i></a><a class="key num_reset">Reset</a><a class="key num_close">Enter</a></fieldset></div>												
 												<span>years old</span>
 											</div> 
 											
@@ -498,7 +498,7 @@
 								</div>
 								
 								<!-- Age at First Child Birth -->
-								<div class="dis-none_are" style="display: block;">
+								<div class="dis-none_are" style="display: none;">
 									<div class="current_age_input_area">
 										<div class="first_age_portion">
 											<span>Enter age at your menopause</span>
@@ -509,7 +509,7 @@
 												<button type="button" class="up91 button" onclick="scrollup(91,91)">▲</button>
 												<button type="button" class="down91 button" onclick="scrolldown(91,91)">▼</button>
 											</div>
-										<fieldset class="numpad" style="display: none;"><input class="key" type="button" value="1"><input class="key" type="button" value="2"><input class="key" type="button" value="3"><input class="key" type="button" value="4"><input class="key" type="button" value="5"><input class="key" type="button" value="6"><input class="key" type="button" value="7"><input class="key" type="button" value="8"><input class="key" type="button" value="9"><input class="key notnth" type="button" value="0"><a class="key num_back"><i class="fa fa-arrow-left"></i></a><a class="key num_reset">Reset</a><a class="key num_close">Enter</a></fieldset></div>
+										</div>
 										<div class="thrd_age_portion">
 											<span>years old</span>
 										</div>
@@ -667,15 +667,15 @@
 										
 										<!-- As Per Request (IBIS Application)  0=No test,1=Negative,2=BRCA1,3=BRCA2 -->
 										<div class="radio_res_holder new-radio-res-holder">
-											<label class="rad_ik_hld">No prior biopsy / No proliferative disease
+											<label class="rad_ik_hld" style="display: none;">No prior biopsy / No proliferative disease
 												<input type="radio" name="breast_biopsy" value="0" checked="checked">
 												<span class="checkmark"></span>
 											</label>
-											<label class="rad_ik_hld">Prior biopsy, result unknown
+											<label class="rad_ik_hld" style="display: none;">Prior biopsy, result unknown
 												<input type="radio" name="breast_biopsy" value="2">
 												<span class="checkmark"></span>
 											</label>
-											<label class="rad_ik_hld">Hyperplasia (not atypia)
+											<label class="rad_ik_hld" style="display: none;">Hyperplasia (not atypia)
 												<input type="radio" name="breast_biopsy" value="1">
 												<span class="checkmark"></span>
 											</label>
@@ -2012,14 +2012,14 @@
 								
 								<div class="panel panel-primary">
 									<div class="panel-heading newpanel-heading"><h2>IBIS Breast Cancer Risk Assessment Score</h2></div>
-									<div class="panel-heading newpanel-heading-two"><h4>Patient Id : <span id="res_patient_id">Patient1620410737</span></h4></div>
+									<div class="panel-heading newpanel-heading-two"><h4>Patient Id : <span id="res_patient_id">Patient1620439534</span></h4></div>
 									<div class="panel-body text-center risk-content new-risk-content">
 										
 										<div class="perall">
 											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
 												<h2>Personal <span>10-Year Risk</span></h2>
 												<canvas id="personal10yr_chart" width="118" height="118" style="display: block; width: 118px; height: 118px;"></canvas>
-												<h4 id="res_personal_10y_risk">0.00 % </h4>												
+												<h4 id="res_personal_10y_risk">-1.00 % </h4>												
 											</div>
 											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
 												<h2>Population  <span>10-Year Risk</span></h2>
@@ -2029,7 +2029,7 @@
 											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
 												<h2>Personal <span>Lifetime Risk</span></h2>
 												<canvas id="personallt_chart" width="118" height="118" style="display: block; width: 118px; height: 118px;"></canvas>
-												<h4 id="res_personal_lt_risk">0.00 % </h4>
+												<h4 id="res_personal_lt_risk">-1.00 % </h4>
 											</div>
 											<div class="prbx"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
 												<h2>Population <span>Lifetime Risk</span></h2>
@@ -2038,12 +2038,12 @@
 											</div>
 										</div>
 										<div class="textbox">
-											<p>Based on the information provided, the patient’s estimated risk for developing invasive breast cancer over the next 10 years is <span id="text_personal_10y_risk">0.0%</span>. The U.S. population’s average 10-year risk is <span id="text_population_10y_risk">-1%</span> for women of the same age and race/ethnicity. Based on the information provided, the patient’s estimated risk for developing invasive breast cancer in her lifetime <span id="text_personal_lt_risk">0.0%</span>. The U.S. population’s average lifetime risk is <span id="text_population_lt_risk">-1%</span> for women of the same age and race/ethnicity.</p>
+											<p>Based on the information provided, the patient’s estimated risk for developing invasive breast cancer over the next 10 years is <span id="text_personal_10y_risk">-1.0%</span>. The U.S. population’s average 10-year risk is <span id="text_population_10y_risk">-1%</span> for women of the same age and race/ethnicity. Based on the information provided, the patient’s estimated risk for developing invasive breast cancer in her lifetime <span id="text_personal_lt_risk">-1.0%</span>. The U.S. population’s average lifetime risk is <span id="text_population_lt_risk">-1%</span> for women of the same age and race/ethnicity.</p>
 										</div>
 										
 										<div class="text-center mtpagn" id="action_btns">
 											<!--<a href="javascript:void(0)" class="download" onclick="window.print();" >Download Results</a>-->
-											<a href="javascript:void(0)" class="download" id="down_result_link" onclick="saveResultPDF('Patient1620410737')">Generate PDF</a>
+											<a href="javascript:void(0)" class="download" id="down_result_link" onclick="saveResultPDF('Patient1620439534')">Generate PDF</a>
 											<a href="javascript:void(0)" class="download next_btn_5">FAQ</a>											
 										</div>
 									</div>
